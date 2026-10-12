@@ -1,0 +1,142 @@
+.main-sell{
+  &__top{
+    padding-right: 9em;
+  }
+  &__tabs{
+    gap: .625em;
+  }
+  &__tab{
+    height: 2.375em;
+    @include center;
+    padding: 0 1.5em;
+    border-radius: 6.25em;
+    border: $border;
+    color: $primary;
+    cursor: pointer;
+    transition: all .3s;
+    &._active,
+    &:hover{
+      background-color: $primary;
+      color: $white;
+    }
+    &._active{
+      pointer-events: none;
+    }
+  }
+}
+
+.products-slider{
+  .swiper-slide{
+    width: calc(100% / 3);
+  }
+  .swiper-nav{
+    margin-bottom: 1.375em;
+  }
+  @media screen and (min-width: 993px){
+    .swiper-container{
+      width: calc(100% + 1.875em);
+    }
+    .swiper-slide{
+      padding-right: 1.875em;
+    }
+  }
+}
+
+.product-card{
+  border: $border;
+  border-radius: .625em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  &__img{
+    @include imgCover(65.8%);
+    border-radius: .625em .625em 0 0;
+  }
+  &__middle{
+    padding: 1.25em 1em;
+    flex-grow: 1;
+  }
+  &__subtitle{
+    color: #888;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+  }
+  &__props{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  &__prop{
+    font-family: $font2;
+    &-title{
+      color: #666;
+    }
+    &-desc{
+      margin-top: .3em;
+      font-weight: 600;
+    }
+  }
+  &__bottom{
+    border-top: $border;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    &-col{
+      border-right: $border;
+      padding: .69em 1em 1em;
+    }
+  }
+  &__btn2{
+    width: 100%;
+    height: 100%;
+    @include center;
+    font-weight: 600;
+    font-family: $font2;
+    color: $primary;
+    &:hover{
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .main-sell{
+    overflow: hidden;
+    &__top{
+      display: block;
+      padding: 0;
+    }
+    &__tabs{
+      margin-top: 1.5em;
+    }
+  }
+
+  .products-slider{
+    .slider__wrap{
+      overflow: unset;
+    }
+    .swiper-slide{
+      width: 22.125em;
+    }
+    .swiper-nav{
+      margin-bottom: 1em;
+    }
+  }
+
+  .product-card{
+    &__bottom{
+      &-col{
+        padding: .625em 1em;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Новости и статьи", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="blog m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>Новости и статьи</span></li>
+                        </ul>
+                    </div>
+                    <div class="blog__top _flex-between">
+                        <h1 class="text30 medium-text blue-text">
+                            Новости и статьи
+                        </h1>
+                        <div class="filter">
+                            <div class="filter-slider slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="filter__item _active">
+                                                <span>Все</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="filter__item">
+                                                <span>Новости</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="filter__item">
+                                                <span>Статьи</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__grid _mt32">
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-catalog m-section">
+                @@include('components/page-blocks/_main-catalog.html')
+            </div>
+
+            <div class="blog m-section _last">
+                <div class="container">
+                    <div class="blog__grid">
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img",
+                        "title":"Статья",
+                        "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                        })
+                        @@include('components/cards/_blog-card.html',{
+                        "img":"blog-img2",
+                        "title":"Новость",
+                        "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                        })
+                    </div>
+                    <div class="_mt48 _flex-center">
+                        <button class="more-btn">
+                            Показать больше
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+.main-info{
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 1.25em));
+    gap: 3.125em 1.875em;
+  }
+  &__col{
+    grid-column: span 2;
+  }
+  &__col2{
+    padding-top: 1.25em;
+  }
+}
+
+.main-news{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - .9375em));
+    gap: 1.875em;
+  }
+}
+
+.blog-card{
+  border-radius: 0.625em;
+  border: $border;
+  padding: 1em 1.25em;
+  display: flex;
+  flex-direction: column;
+  &:hover{
+    color: $black;
+    border-color: $primaryHover;
+  }
+  &__top{
+    @include grid100gap(.3125em);
+  }
+  &__desc{
+    @include truncate(3);
+  }
+  &__bottom{
+    margin-top: auto;
+    padding-top: .875em;
+    display: grid;
+    grid-template-columns: auto 14.375em;
+    justify-content: space-between;
+  }
+  &__img{
+    @include imgCover(55%);
+  }
+  &__info{
+    position: relative;
+  }
+  &__link{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.1875em;
+    @include center;
+    svg{
+      width: 100%;
+    }
+    &:hover{
+      path{
+        fill: $primary;
+      }
+    }
+  }
+}
+
+.main-site{
+  &__link{
+    @include imgCover(66.5%);
+    border-radius: .625em;
+  }
+}
+
+.media{
+  &__grid{
+    display: grid;
+    grid-template-columns: calc(100% - 30.625em) 29.375em;
+    gap: 1.875em 1.25em;
+  }
+}
+
+.video-card{
+  display: block;
+  position: relative;
+  &:before{
+    content: '';
+    @include centerAbsolute;
+    width: 3.5em;
+    height: 3.5em;
+    background-image: url(../img/play.svg);
+    @include bgImgSize(100%);
+    z-index: 2;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8em;
+    border-radius: 0 0 .625em .625em;
+    background: linear-gradient(180deg, rgba(44, 54, 120, 0.00) 0%, rgba(44, 54, 120, 0.50) 100%);
+  }
+  &__text{
+    @include centerAbsolute;
+    width: 4.875em;
+    height: 4.875em;
+    img{
+      width: 100%;
+      animation: spin 12s linear infinite;
+    }
+  }
+  &__img{
+    height: 25em;
+    @include imgCover(0);
+    border-radius: .625em;
+  }
+  &__content{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2em .5em 2em 1em;
+    max-width: 32em;
+  }
+  &__title{
+    color: $white;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.object-video{
+  @media screen and (min-width: 993px){
+    .swiper-pagination{
+      display: none;
+    }
+    .swiper-nav{
+      position: static;
+    }
+    .swiper-button{
+      margin: 0;
+      transform: translateY(-50%);
+      position: absolute;
+      width: 2.1875em;
+      height: 2.1875em;
+      background-color: transparent;
+      &-prev{
+        left: 1.375em;
+        background-image: url(../img/prev2.svg);
+      }
+      &-next{
+        right: 1.375em;
+        background-image: url(../img/next2.svg);
+      }
+    }
+  }
+  @media screen and (min-width: 577px){
+    .video-card__title{
+      font-size: 1.125em;
+    }
+    .video-card__content{
+      padding: 2em 1.375em;
+    }
+  }
+}
+
+.clips{
+  .swiper-slide{
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .main-info{
+    &__inner{
+      grid-template-columns: 100%;
+    }
+    &__col{
+      grid-column: span 1;
+    }
+    &__col2{
+      padding-top: 0;
+    }
+  }
+
+  .blog-card{
+    padding: .875em 1.25em;
+    &__bottom{
+      grid-template-columns: auto 13.625em;
+    }
+    &__link{
+      width: 1.9375em;
+    }
+  }
+
+  .media{
+    overflow: hidden;
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
+
+  .clips{
+    .slider__wrap{
+      overflow: unset;
+    }
+    .swiper-slide{
+      width: 15em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .main-news{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
+
+  .object-video{
+    .video-card__img{
+      height: 13em;
+    }
+    .video-card__content{
+      padding: 1.25em;
+    }
+    .video-card__title{
+      @include truncate(2);
+    }
+    .video-card:before{
+      width: 2.75em;
+      height: 2.75em;
+    }
+    .video-card:after{
+      height: 4.75em;
+    }
+    .video-card__text{
+      width: 3.875em;
+      height: 3.875em;
+    }
+  }
+}

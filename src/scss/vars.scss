@@ -1,0 +1,14 @@
+:root {
+    --vh: 1vh;
+}
+
+$font1:'Stolzl', sans-serif;
+$font2:'Inter', sans-serif;
+$black: #444;
+$white: #fff;
+$primary: #36428F;
+$primary2: #687BFF;
+$primaryHover: #6B72A5;
+$gray: #ABABAB;
+$vh: calc(100 * var(--vh));
+$border: 1px solid #E4EAF1;

@@ -1,0 +1,398 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="catalog-info m-section _toggle-more-parent">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">Аренда подъемников</a></li>
+                            <li><span>Аренда грузопассажирских подъемников</span></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-info__top">
+                        <h1 class="text30 text22-tablet blue-text medium-text">
+                            Аренда грузопассажирских подъемников
+                        </h1>
+                    </div>
+                    <div class="_mt20 _mt16-tablet">
+                        <div class="link-slider slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-slider__item">
+                                            Грузопассажирские
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-slider__item">
+                                            Фасадные
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-slider__item">
+                                            Мачтовые
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-slider__item">
+                                            Грузовые
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-info__grid">
+                        <div class="catalog-info__col">
+                            <div class="text">
+                                <p>
+                                    Аренда грузопассажирских подъемников весьма удобна при строительстве, отделке или же реконструкции жилых и производственных зданий. Аренда мачтовых подъемников позволяет сократить расходы на покупку дорогостоящего оборудования, последующего его хранения и возможного ремонта. Современные грузопассажирские подъемники, это быстрота их монтажа, удобство использования и непревзойденная надежность. Нашим клиентам мы предлагаем полный спектр услуг в который входят: доставка и вывоз грузопассажирского подъемника на объект заказчика, профессиональный монтаж и демонтаж подъемника....
+                                </p>
+                                <p>
+                                    Аренда грузопассажирских подъемников весьма удобна при строительстве, отделке или же реконструкции жилых и производственных зданий. Аренда мачтовых подъемников позволяет сократить расходы на покупку дорогостоящего оборудования, последующего его хранения и возможного ремонта. Современные грузопассажирские подъемники, это быстрота их монтажа, удобство использования и непревзойденная надежность. Нашим клиентам мы предлагаем полный спектр услуг в который входят: доставка и вывоз грузопассажирского подъемника на объект заказчика, профессиональный монтаж и демонтаж подъемника....
+                                </p>
+                            </div>
+                            <button class="catalog-info__more _toggle-more">
+                                <span class="_view1">
+                                    Читать полностью
+                                </span>
+                                <span class="_view2">Скрыть</span>
+                                <img src="img/arrow-bottom.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="catalog-info__col2">
+                            <div class="text22 medium-text blue-text">
+                                Оперативно подберем подъемник на ваш проект
+                            </div>
+                            <div class="_mt12">
+                                <div class="text16">
+                                    Ответим на все вопросы и вышлем
+                                    коммерческое предложение
+                                </div>
+                            </div>
+                            <div class="catalog-info__nav">
+                                <a href="" class="catalog-info__link m-btn m-btn-blue">
+                                    <span>Получить расчет</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog m-section">
+                <div class="container">
+                    <div class="filter">
+                        <div class="filter-slider slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="filter__item _active">
+                                            <span>Все</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="filter__item">
+                                            <span>до 1000 кг</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="filter__item">
+                                            <span>до 2000 кг</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="filter__item">
+                                            <span>> 150 м</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="filter__item">
+                                            <span>200 > м</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="filter__clear">
+                                            <span>Сбросить</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__grid">
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img2",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img3",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img2",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img3",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img2",
+                        "btn":"Арендовать",
+                        })
+                        @@include('components/cards/_product-card.html',{
+                        "img":"product-img3",
+                        "btn":"Арендовать",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-price get-price2 m-section">
+                @@include('components/page-blocks/_get-price2.html')
+            </div>
+
+            <div class="media media-catalog m-section">
+                <div class="container">
+                    <div class="media__grid">
+                        <div class="media__col">
+                            @@include('components/page-blocks/_object-video.html')
+                        </div>
+                        <div class="media__col2">
+                            <div class="text22 text20-tablet medium-text blue-text">
+                                Сервис и запчасти
+                            </div>
+                            <div class="service-equip _mt20 _mt16-tablet">
+                                <div class="service-equip__img">
+                                    <img src="img/service-equip.webp" alt="">
+                                </div>
+                                <div class="service-equip__content">
+                                    <div class="text18 text16-tablet">
+                                        Комплексный подход
+                                    </div>
+                                    <div class="text26 text24-tablet">
+                                        Подберем. Доставим.
+                                        Установим.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain">
+                        <div class="seo__col">
+                            <h2 class="h2">
+                                Преимущества аренды грузопассажирских подъемников
+                            </h2>
+                        </div>
+                        <div class="seo__col2">
+                            <div class="text">
+                                <p>
+                                    Подмосковная компания «Рентал инжиниринг» специализируется на продаже, аренде и сервисном обслуживании оборудования для высотных работ финской фирмы «Scanclimber». Мы предлагаем ее строительным, монтажным и реставрационным организациям из России, Белоруссии и Казахстана. Приобретая у нас в аренду мачтовые строительные грузопассажирские подъемники, вы получаете качественный сервис, надежное оборудование и тесное взаимодействие на весь период аренды.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo _gray m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain">
+                        <div class="seo__col">
+                            <h2 class="h2">
+                                Преимущества аренды грузопассажирских подъемников
+                            </h2>
+                        </div>
+                        <div class="seo__col2">
+                            <div class="text">
+                                <p>
+                                    Подмосковная компания «Рентал инжиниринг» специализируется на продаже, аренде и сервисном обслуживании оборудования для высотных работ финской фирмы «Scanclimber». Мы предлагаем ее строительным, монтажным и реставрационным организациям из России, Белоруссии и Казахстана. Приобретая у нас в аренду мачтовые строительные грузопассажирские подъемники, вы получаете качественный сервис, надежное оборудование и тесное взаимодействие на весь период аренды.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain _gap2">
+                        <div class="seo__col">
+                            <h2 class="h2">
+                                Современные лифты для ремонтных и строительных работ
+                            </h2>
+                            <div class="text _mt24 _mt16-tablet">
+                                <p>
+                                    Наша компания предлагает большой выбор лифтов, специально предназначенных для строительных работ на высоте. В каталоге представлены модели с различными видами систем управления, грузоподъемностью, габаритными размерами и функциональными возможностями. Для удобства выбора каждый подъемник имеет подробное описание с указанием технических характеристик.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="seo__col2">
+                            <h2 class="h2">
+                                Современные лифты для ремонтных и строительных работ
+                            </h2>
+                            <div class="text _mt24 _mt16-tablet">
+                                <p>
+                                    Подбирая грузоподъемный механизм, нужно обратить внимание на следующие параметры:
+                                </p>
+                                <ul>
+                                    <li>грузоподъемность устройства;</li>
+                                    <li>внутренние размеры кабины;</li>
+                                    <li>максимальную высоту подъема;</li>
+                                    <li>скорость подъема кабины;</li>
+                                    <li>тип и мощность электродвигателя.</li>
+                                </ul>
+                                <p>
+                                    Дополнительные вопросы вы можете задать нашим специалистам. Они не только предоставят полную информацию по любому интересующему вопросу, но и помогут сделать правильный выбор, учитывая то, в каких условиях будет проводиться эксплуатация подъемника.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo _gray m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain _gap2">
+                        <div class="seo__col">
+                            <h2 class="h2">
+                                Современные лифты для ремонтных и строительных работ
+                            </h2>
+                            <div class="text _mt24 _mt16-tablet">
+                                <p>
+                                    Наша компания предлагает большой выбор лифтов, специально предназначенных для строительных работ на высоте. В каталоге представлены модели с различными видами систем управления, грузоподъемностью, габаритными размерами и функциональными возможностями. Для удобства выбора каждый подъемник имеет подробное описание с указанием технических характеристик.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="seo__col2">
+                            <h2 class="h2">
+                                Современные лифты для ремонтных и строительных работ
+                            </h2>
+                            <div class="text _mt24 _mt16-tablet">
+                                <p>
+                                    Подбирая грузоподъемный механизм, нужно обратить внимание на следующие параметры:
+                                </p>
+                                <ul>
+                                    <li>грузоподъемность устройства;</li>
+                                    <li>внутренние размеры кабины;</li>
+                                    <li>максимальную высоту подъема;</li>
+                                    <li>скорость подъема кабины;</li>
+                                    <li>тип и мощность электродвигателя.</li>
+                                </ul>
+                                <p>
+                                    Дополнительные вопросы вы можете задать нашим специалистам. Они не только предоставят полную информацию по любому интересующему вопросу, но и помогут сделать правильный выбор, учитывая то, в каких условиях будет проводиться эксплуатация подъемника.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo _gray m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain _gap2">
+                        <div class="seo__top">
+                            <h3 class="h3">
+                                Получите инженерный расчет <br>
+                                от нашего специалиста
+                            </h3>
+                        </div>
+
+                        <div class="seo__col">
+                            <div class="text">
+                                <p>
+                                    Стоит отметить, что все модели грузопассажирских подъемников VECTOR и платформ производства Scanclimber отличает современная электронная система торможения и контроля хода. Это не только комфорт при перемещении пассажиров, но и повышенная безопасность, подкрепленная датчиками перегрузок и системой самодиагностики. Добавим к этому большую мощность приводной системы (до 2000 кг) и полный набор оборудования для монтажа к каждой модели!
+                                    <br>
+                                    Специалисты «Рентал инжиниринг» имеют большой опыт обслуживания и эксплуатации подъемного оборудования. Наши бригады осуществляют выездной монтаж, демонтаж и ремонт предоставляемой в аренду техники. Заботясь о Вашей безопасности и своем престиже, мы используем только оригинальные «фирменные» запчасти и даём уверенность в своем оборудовании на весь период его использования.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="seo__col2">
+                            <div class="text">
+                                <p>
+                                    Наша компания предоставляет услугу по шеф-монтажу оборудования для клиентов, а также мы предлагаем услуги профессионально обученных лифтеров для работы на наших грузопассажирских подъемниках.
+                                    Каждый грузопассажирский подъемник VECTOR или рабочая платформа Scanclimber, которые мы предлагаем, зарегистрирована и сертифицирована органами технического надзора России, Белоруссии и Казахстана. Перед продажей и арендой техника проходит осмотр на работоспособность всех ее узлов и механизмов. Поэтому, выбирая нашу технику, заказчики могут быть абсолютно уверены в ее надежности даже при интенсивной эксплуатации в самых жестких погодных условиях. Так же ответственно мы подходим к обучению и квалификации нашего персонала. Будь то монтажники, ремонтники и операторы (лифтеры) нашей компании. И накопленные нами положительные отзывы наших партнеров лишний раз это подтверждают.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo seo-why _gray m-section">
+                <div class="container">
+                    <div class="seo__inner _curtain _gap2">
+                        <div class="h2 text-center">
+                            Почему арендовать лучше у нас?
+                        </div>
+
+                        <div class="seo-why__grid">
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon",
+                            "title":"Безопасность <br> и надежность оборудования",
+                            })
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon2",
+                            "title":"Вся продукция зарегистрирована и сертифицирована органами технического надзора России",
+                            })
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon3",
+                            "title":"Более 100 единиц оборудования",
+                            })
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon4",
+                            "title":"Гарантийное и послегарантийное обслуживание",
+                            })
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon5",
+                            "title":"Квалифицированный персонал",
+                            })
+                            @@include('components/cards/_why-card.html',{
+                            "icon":"why-icon6",
+                            "title":"Консультирование и оказание помощи при сдаче оборудования в эксплуатацию",
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-info m-section _last">
+                @@include('components/page-blocks/_main-info.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

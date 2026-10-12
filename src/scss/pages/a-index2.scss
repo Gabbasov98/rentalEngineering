@@ -1,0 +1,228 @@
+.clients-slider{
+  .swiper-slide{
+    width: 25%;
+  }
+  .swiper-nav{
+    margin-bottom: 1.875em;
+  }
+}
+
+.client-card{
+  border: $border;
+  border-radius: 0.5em;
+  height: 8.75em;
+  padding: 2.8em 1.875em;
+  @include center;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+._curtain{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.4375em;
+    height: calc(100% - 3.75em);
+    border-radius: 0 6.25em 6.25em 0;
+    background: linear-gradient(180deg, #F4F4F4 0%, #8F8F8F 100%);
+  }
+}
+
+.main-about{
+  &__inner{
+    padding: 3.375em 2.375em;
+    border-radius: 0.625em;
+    background: $primary;
+    color: $white;
+    display: grid;
+    grid-template-columns: 30.5em 36.125em;
+    justify-content: space-between;
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+  }
+  &__more{
+    display: none;
+  }
+  &__subtitle{
+    letter-spacing: 0.1em;
+    margin-bottom: .625em;
+  }
+  &__title{
+    background: linear-gradient(90deg, #FFF 0%, #999 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__nav{
+    display: flex;
+    margin-top: auto;
+  }
+}
+
+.get-price{
+  &__inner{
+    padding: 2em 2.5em;
+    border-radius: 0.625em;
+    background: #F4F4F4;
+  }
+  &__top{
+    max-width: 40em;
+  }
+  .m-check{
+    order: 2;
+    grid-column: 1/-1;
+  }
+}
+
+.m-form{
+  &__wrap{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 2.5em / 3));
+    gap: 1.5em 1.25em;
+  }
+  &__btn{
+    height: 3.625em;
+    width: 100%;
+    span{
+      font-size: 1.125em;
+    }
+  }
+}
+
+._toggle-more-parent{
+  ._toggle-more{
+    ._view2{
+      display: none;
+    }
+    img{
+      transition: all .3s;
+    }
+  }
+  &._show-all{
+    ._toggle-more{
+      ._view1{
+        display: none;
+      }
+      ._view2{
+        display: block;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .clients{
+    overflow: hidden;
+  }
+
+  .clients-slider{
+    .slider__wrap{
+      overflow: unset;
+    }
+    .swiper-slide{
+      width: 10.75em;
+    }
+    .swiper-nav{
+      display: none;
+    }
+  }
+
+  .client-card{
+    height: 4.875em;
+    padding: 1.5em 1em;
+  }
+
+  ._curtain{
+    &:before{
+      width: calc(100% - 2.5em);
+      height: .4375em;
+      left: 1.25em;
+      top: 0;
+      border-radius: 0 0 6.25em 6.25em;
+      transform: unset;
+    }
+  }
+
+  .main-about{
+    &:not(._show-all){
+      .text{
+        &>*:nth-child(2)~*{
+          display: none;
+        }
+      }
+    }
+    &__inner{
+      padding: 3em 1.25em 7.5em;
+      grid-template-columns: 100%;
+      gap: 2.5em;
+    }
+    &__more{
+      display: flex;
+      margin-top: .375em;
+      color: #C5CCFF;
+      span{
+        display: inline-block;
+        position: relative;
+        font-size: 1em;
+        line-height: 120%;
+        overflow: hidden;
+        padding: 0 .25em .5em;
+        margin-left: -.25em;
+        &:after{
+          content: '.....................';
+          position: absolute;
+          left: 0;
+          top: .5em;
+          width: 100%;
+          line-height: 120%;
+        }
+      }
+      ._view2{
+        display: none;
+        padding-right: .125em;
+      }
+    }
+    &__nav{
+      position: absolute;
+      bottom: 2.5em;
+      left: 0;
+      padding: 0 1.25em;
+    }
+  }
+
+  .get-price{
+    &__inner{
+      padding: 2.625em 1.25em;
+    }
+    .m-check{
+      order: unset;
+    }
+  }
+
+  .m-form{
+    &__wrap{
+      grid-template-columns: 100%;
+    }
+    &__btn{
+      height: 3.5em;
+      span{
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}

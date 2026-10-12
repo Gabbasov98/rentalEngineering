@@ -1,0 +1,56 @@
+.rating{
+  display: flex;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  position: relative;
+  &--read-only {
+    pointer-events: none;
+  }
+  &__field {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__item {
+    flex-shrink: 0;
+    transition: all .3s;
+    width: 1.25em;
+    margin-right: .125em;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    path {
+      fill: #ccc;
+      stroke: #ccc;
+    }
+    &:hover {
+      cursor: pointer;
+      path {
+        fill: #F8B808;
+      }
+      &~.rating-input__item {
+        path {
+          fill: #F8B808;
+        }
+      }
+    }
+  }
+}
+
+.rating-input[data-total-rating="1"]:not(:hover) .rating-input__item:nth-child(n+5),
+.rating-input[data-total-rating="2"]:not(:hover) .rating-input__item:nth-child(n+4),
+.rating-input[data-total-rating="3"]:not(:hover) .rating-input__item:nth-child(n+3),
+.rating-input[data-total-rating="4"]:not(:hover) .rating-input__item:nth-child(n+2),
+.rating-input[data-total-rating="5"]:not(:hover) .rating-input__item:nth-child(n+1) {
+  path {
+    fill: #F8B808;
+    stroke: #F8B808;
+  }
+}

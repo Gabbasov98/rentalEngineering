@@ -1,0 +1,243 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="main">
+                <div class="main__img m-backdrop">
+                    <img src="img/main.webp" alt="" class="_view1">
+                    <img src="img/main-mob.webp" alt="" class="_view2">
+                </div>
+                <div class="container">
+                    <div class="main__content">
+                        <div class="text46 text30-tablet">
+                            Строительные подъемники  <span class="_no-wrap">от лидера рынка</span>
+                        </div>
+                        <div class="main__desc light-text">
+                            Rental Engineering — эксперт по аренде и продаже мачтовых платформ и строительных подъемников в России
+                        </div>
+                    </div>
+                    <div class="main__nav _flex">
+                        <a href="" class="main__link m-btn m-btn-blue">
+                            <span>Отправить запрос</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-advantages m-section">
+                @@include('components/page-blocks/_main-advantages.html')
+            </div>
+
+            <div class="main-sell m-section _tabs-parent">
+                <div class="container">
+                    <div class="main-sell__top _flex-between">
+                        <div class="main-sell__info">
+                            <div class="text16 text14-tablet blue-text2 light-text">
+                                Продажа и аренда
+                            </div>
+                            <div class="text22 text20-tablet medium-text blue-text">
+                                Подъемники и платформы
+                            </div>
+                        </div>
+
+                        <div class="main-sell__tabs _flex">
+                            <div class="main-sell__tab _tab _active" data-tab="_tab1">
+                                <span class="text14">Аренда</span>
+                            </div>
+                            <div class="main-sell__tab _tab" data-tab="_tab2">
+                                <span class="text14">Продажа</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content _tab1 _active">
+                        <div class="_mt20 _mt16-tablet products-slider slider">
+                            <div class="slider__wrap">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img",
+                                            "btn":"Арендовать",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img2",
+                                            "btn":"Арендовать",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img3",
+                                            "btn":"Арендовать",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img",
+                                            "btn":"Арендовать",
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('components/ui/_swiper-nav.html')
+                        </div>
+                    </div>
+
+                    <div class="tab-content _tab2">
+                        <div class="_mt20 _mt16-tablet products-slider slider">
+                            <div class="slider__wrap">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img3",
+                                            "btn":"Купить",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img",
+                                            "btn":"Купить",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img2",
+                                            "btn":"Купить",
+                                            })
+                                        </div>
+                                        <div class="swiper-slide">
+                                            @@include('components/cards/_product-card.html',{
+                                            "img":"product-img",
+                                            "btn":"Купить",
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('components/ui/_swiper-nav.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-catalog m-section">
+                @@include('components/page-blocks/_main-catalog.html')
+            </div>
+
+            <div class="get-price m-section">
+                @@include('components/page-blocks/_get-price.html')
+            </div>
+
+            <div class="main-about m-section _toggle-more-parent">
+                <div class="container">
+                    <div class="main-about__inner _curtain">
+                        <div class="main-about__col">
+                            <div class="main-about__subtitle text16 caps-text">
+                                О КОМПАНИИ
+                            </div>
+                            <div class="main-about__title text36 text24-tablet">
+                                Rental Engineering — инженерный партнер строительных проектов
+                            </div>
+                            <div class="main-about__nav">
+                                <a href="" class="main-about__link m-btn m-btn-white-outline">
+                                    <span>Подробнее о нас</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main-about__col2">
+                            <div class="text">
+                                <p>Rental Engineering — специализированная инженерная компания в сфере аренды и продажи строительных подъемников, мачтовых платформ и фасадного оборудования.</p>
+
+                                <p>Мы работаем с крупнейшими строительными, промышленными и инфраструктурными объектами России, обеспечивая полный цикл: от подбора оборудования и проектирования до монтажа, сервиса и технического сопровождения.</p>
+
+                                <p>Наша задача — не просто предоставить технику, а предложить эффективное решение под конкретные задачи объекта с учетом сроков, высоты, логистики, нагрузок и условий эксплуатации.</p>
+
+                                <p>Собственный парк техники, инженерная экспертиза и сервисная инфраструктура позволяют нам запускать проекты любой сложности в кратчайшие сроки.</p>
+                            </div>
+                            <button class="main-about__more _toggle-more">
+                                <span class="_view1">Развернуть</span>
+                                <span class="_view2">Скрыть</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clients m-section">
+                @@include('components/page-blocks/_clients.html')
+            </div>
+
+            <div class="media m-section">
+                <div class="container">
+                    <div class="media__grid">
+                        <div class="media__col">
+                            @@include('components/page-blocks/_object-video.html')
+                        </div>
+                        <div class="media__col2">
+                            <div class="clips">
+                                <div class="text22 text20-tablet medium-text blue-text">
+                                    Клипы
+                                </div>
+                                <div class="_mt20 _mt16-tablet slider">
+                                    <div class="slider__wrap">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    @@include('components/cards/_video-card.html',{
+                                                    "img":"video-img2",
+                                                    "title":"Грузопассажирские подъемники VECTOR SC 200 на объекте ЖК City Bay.",
+                                                    })
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    @@include('components/cards/_video-card.html',{
+                                                    "img":"video-img3",
+                                                    "title":"Грузопассажирские подъемники Scanclimber и Stros.",
+                                                    })
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    @@include('components/cards/_video-card.html',{
+                                                    "img":"video-img2",
+                                                    "title":"Грузопассажирские подъемники VECTOR SC 200 на объекте ЖК City Bay.",
+                                                    })
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    @@include('components/cards/_video-card.html',{
+                                                    "img":"video-img3",
+                                                    "title":"Грузопассажирские подъемники Scanclimber и Stros.",
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('components/ui/_swiper-nav.html')
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-info m-section _last">
+                @@include('components/page-blocks/_main-info.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

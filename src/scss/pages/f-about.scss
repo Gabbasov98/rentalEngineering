@@ -1,0 +1,106 @@
+.about-main{
+  &__top{
+    max-width: 61.5em;
+  }
+  .text{
+    max-width: 56em;
+  }
+  &__images{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - 1.25em));
+    gap: 2.5em;
+  }
+}
+
+.solutions{
+  &__top{
+    max-width: 37em;
+    @include grid100gap(.5em);
+  }
+  &__desc{
+    margin-top: .9em;
+  }
+  &__grid{
+    margin-top: 2.75em;
+    display: grid;
+    grid-template-columns: repeat(6,calc(100% / 6 - 9.375em / 6));
+    gap: 3.75em 1.875em;
+  }
+}
+
+.solution-card{
+  @media screen and (min-width: 993px){
+    grid-column: span 2;
+    &:nth-child(1),
+    &:nth-child(2){
+      grid-column: span 3;
+      .solution-card__img{
+        padding-bottom: 54.7%;
+      }
+      .solution-card__content{
+        max-width: 27em;
+      }
+    }
+  }
+  &__img{
+    @include imgCover(74%);
+    border-radius: .625em;
+  }
+  &__content{
+    @include grid100gap(.75em);
+    margin-top: 1.875em;
+  }
+  &__desc{
+    line-height: 150%;
+  }
+}
+
+.geography{
+  &__inner{
+    padding: 2.5em;
+    background-color: #F4F4F4;
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: calc(100% - 23em) 21em;
+    gap: 2em;
+  }
+  &__col2{
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+  }
+  &__top{
+    max-width: 37.5em;
+    @include grid100gap(1em);
+  }
+  &__img{
+    margin-top: -1.375em;
+    display: block;
+    width: 100%;
+  }
+  &__items{
+    @include grid100gap(3em);
+  }
+  &__bottom{
+    margin-top: auto;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .arrow-link{
+      margin-top: 1.5em;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 992px){
+
+}
+
+
+@media screen and (max-width: 576px){
+
+}

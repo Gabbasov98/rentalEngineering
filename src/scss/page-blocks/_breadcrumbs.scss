@@ -1,0 +1,46 @@
+@import "../vars.scss";
+.breadcrumbs {
+    margin-bottom: 1em;
+    color: $primary;
+    font-weight: 300;
+    ul{
+        @include truncateLine;
+        white-space: nowrap;
+    }
+    li{
+        display: inline;
+        position: relative;
+        &:not(:first-child) {
+            margin-left: .625em;
+            &:before {
+                content: '/';
+                position: absolute;
+                top: .125em;
+                right: 100%;
+                margin-right: .3125em;
+                font-size: .875em;
+                line-height: 157%;
+            }
+        }
+        &:last-child{
+            pointer-events: none;
+            color: #AAA;
+        }
+    }
+    a,span{
+        font-size: .875em;
+        line-height: 157%;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .breadcrumbs{
+        overflow: hidden;
+        ul{
+            font-size: .875em;
+        }
+    }
+}
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"О компании", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="about-main m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>О компании</span></li>
+                        </ul>
+                    </div>
+                    <div class="about-main__top">
+                        <h1 class="text30 medium-text blue-text">
+                            Компания «Рентал Инжиниринг» представляет на рынке России, Белоруссии и Казахстана грузопассажирские подъемники VECTOR и финские мачтовые рабочие платформы и грузопассажирские подъемники Scanclimber.
+                        </h1>
+                    </div>
+                    <div class="text text-big _mt32">
+                        <p>
+                            Благодаря своему качеству, надежности, простоте транспортировки и легкости обслуживания подъемная техника, продажа которой нами осуществляется, превосходно показала себя в эксплуатации.
+                        </p>
+                        <p>
+                            В «Рентал инжиниринг» представлены современные модели данной техники. Специалисты компании окажут Вам содействие в выборе нужного подъемника с учетом объема выполняемых компанией работ и ее финансовых возможностей.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-advantages m-section">
+                @@include('components/page-blocks/_main-advantages.html')
+            </div>
+
+            <div class="solutions m-section">
+                <div class="container">
+                    <div class="solutions__top">
+                        <div class="text18 text14-tablet blue-text2">
+                            Где работают наши решения
+                        </div>
+                        <div class="text22 text20-tablet medium-text blue-text">
+                            Поднимаем ваш бизнес
+                            <span class="_no-wrap">на новые вершины</span>
+                        </div>
+                        <div class="solutions__desc text18">
+                            Подбираем и поставляем подъемное оборудование для различных отраслей строительства, учитывая специфику проектов и требования к эксплуатации
+                        </div>
+                    </div>
+                    <div class="solutions__grid">
+                        @@include('components/cards/_solution-card.html',{
+                        "img":"solution-img",
+                        "title":"Жилищное строительство",
+                        "desc":"Высотные жилые комплексы, апарт-комплексы, масштабные девелоперские проекты.",
+                        })
+                        @@include('components/cards/_solution-card.html',{
+                        "img":"solution-img2",
+                        "title":"Коммерческое строительство",
+                        "desc":"Бизнес-центры, торговые и многофункциональные комплексы.",
+                        })
+                        @@include('components/cards/_solution-card.html',{
+                        "img":"solution-img3",
+                        "title":"Промышленное строительство",
+                        "desc":"Производственные и инфраструктурные объекты, где требуется интенсивная эксплуатация подъемного оборудования.",
+                        })
+                        @@include('components/cards/_solution-card.html',{
+                        "img":"solution-img4",
+                        "title":"Реконструкция <br> и реставрация",
+                        "desc":"Работа с существующими зданиями, фасадами и объектами сложной архитектуры.",
+                        })
+                        @@include('components/cards/_solution-card.html',{
+                        "img":"solution-img5",
+                        "title":"Специальное <br> строительство",
+                        "desc":"Объекты, требующие нестандартных инженерных решений и индивидуального подбора оборудования.",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="geography m-section">
+                <div class="container">
+                    <div class="geography__inner">
+                        <div class="geography__col">
+                            <div class="geography__top">
+                                <div class="text30 blue-text medium-text">
+                                    География работы
+                                </div>
+                                <div class="text18">
+                                    Работаем с объектами в России, Беларуси и Казахстане, обеспечивая поставку оборудования, монтаж и техническое сопровождение проектов.
+                                </div>
+                            </div>
+                            <img src="img/geography.svg" alt="" class="geography__img">
+                        </div>
+                        <div class="geography__col2">
+                            <div class="geography__items">
+                                <div class="geography-item">
+                                    <div class="geography-item__top">
+                                        <div class="text20 medium-text">
+                                            Москва и МО
+                                        </div>
+                                    </div>
+                                    <div class="text16">
+                                        Главный офис и склад <br>
+                                        Тел. +7 (495) 255-37-07
+                                    </div>
+                                </div>
+                                <div class="geography-item">
+                                    <div class="geography-item__top">
+                                        <div class="text20 medium-text">
+                                            Казань
+                                        </div>
+                                    </div>
+                                    <div class="text16">
+                                        Официальное представительство <br>
+                                        +7 (917) 901-84-41
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="geography__bottom">
+                                <div class="text20 medium-text blue-text">
+                                    Мы открыты к сотрудничеству
+                                    <span class="_no-wrap">и новым проектам</span>
+                                </div>
+                                <a href="" class="arrow-link">
+                                    <span>Свяжитесь с нами</span>
+                                    <img src="img/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-advantages m-section">
+                <div class="container">
+                    <div class="about-advantages__items">
+                        @@include('components/cards/_info-group.html',{
+                        "img":"info-img",
+                        "title":"Квалифицированные <br> специалисты",
+                        "desc":"Специалисты «Рентал инжиниринг» имеют большой опыт обслуживания и эксплуатации подъемного оборудования. Наши бригады осуществляют выездной монтаж, демонтаж и ремонт данной техники, используя только оригинальные запчасти. Наша компания предоставляет услугу по шеф-монтажу оборудования для клиентов, также мы предлагаем услуги профессионально обученных лифтеров для работы на наших грузопассажирских подъемниках.",
+                        "link":"Сервис и запчасти",
+                        })
+                        @@include('components/cards/_info-group.html',{
+                        "img":"info-img2",
+                        "title":"Надежная техника",
+                        "desc":"Каждый грузопассажирский подъемник VECTOR или рабочая платформа Scanclimber, которые мы предлагаем, зарегистрирована и сертифицирована органами технического надзора России, Белоруссии и Казахстана. Перед продажей и арендой техника проходит осмотр на работоспособность всех ее узлов и механизмов. Поэтому, выбирая нашу технику, заказчики могут быть абсолютно уверены в ее надежности даже при интенсивной эксплуатации в самых жестких условиях.",
+                        "link":"Перейти в каталог",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="clients m-section _last">
+                @@include('components/page-blocks/_clients.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

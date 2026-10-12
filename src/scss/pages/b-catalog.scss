@@ -1,0 +1,153 @@
+.service-equip{
+  position: relative;
+  color: $white;
+  &__img{
+    border-radius: .625em;
+    height: 26.375em;
+    @include imgCover(0);
+  }
+  &__content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2.75em 1.875em;
+    @include grid100gap(.5em);
+  }
+}
+
+.media-catalog{
+  @media screen and (min-width: 993px){
+    .media__grid{
+      grid-template-columns: calc(100% - 26.25em - 1.875em) 26.25em;
+    }
+    .video-card__img{
+      height: 26.375em;
+    }
+    .video-card__title{
+      font-size: 1.25em;
+    }
+  }
+}
+
+.get-price2{
+  .get-price__inner{
+    background-color: $primary;
+    color: $white;
+  }
+  .fg{
+    input{
+      border-color: #C5CCFF;
+      color: $white;
+      &::placeholder{
+        color: #C5CCFF;
+      }
+    }
+  }
+  .m-check {
+    input {
+      &:checked+label {
+        &::before {
+          background-color: #C5CCFF;
+          border-color: #C5CCFF;
+        }
+      }
+    }
+    label {
+      &:before {
+        background-image: url(../img/check2.svg);
+      }
+    }
+    a{
+      &:hover{
+        color: $white;
+        opacity: .9;
+      }
+    }
+  }
+}
+
+.catalog{
+  overflow: hidden;
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3 - 1.25em));
+    gap: 3.75em 1.875em;
+    margin-top: 1.5em;
+  }
+}
+
+.filter{
+  margin-bottom: 1.5em;
+  &__item,
+  &__clear{
+    height: 2.3125em;
+    @include center;
+    cursor: pointer;
+    span{
+      font-size: .875em;
+    }
+  }
+  &__item{
+    padding: 0 1.5em;
+    border-radius: 6.25em;
+    border: $border;
+    color: $primary;
+    transition: all .3s;
+    &:hover{
+      border-color: $primary;
+    }
+    &._active{
+      pointer-events: none;
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+  &__clear{
+    color: #AAA;
+    padding: 0 .375em;
+    &:hover{
+      color: $primary;
+    }
+  }
+}
+
+.filter-slider{
+  .swiper-container{
+    width: calc(100% + .625em);
+  }
+  .swiper-slide{
+    padding-right: .625em;
+    width: auto;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .catalog{
+    &__grid{
+      grid-template-columns: repeat(2,calc(50% - .9375em));
+      gap: 2em 1.875em;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 576px){
+  .service-equip{
+    &__img{
+      height: 22.5em;
+    }
+    &__content{
+      padding: 1.875em 1.25em;
+    }
+  }
+
+  .catalog{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
+}

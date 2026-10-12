@@ -1,0 +1,196 @@
+.fg {
+  position: relative;
+  margin: 0;
+  label{
+    display: block;
+    font-size: .9375em;
+    line-height: 140%;
+    margin-bottom: .375em;
+    span{
+      color: $primary;
+    }
+  }
+  .nice-select,
+  input,
+  textarea{
+    border-radius: 5.55em;
+    border: 1px solid #C9CBDB;
+    padding: 0 1.33em;
+    height: 3.22em;
+    width: 100%;
+    font-size: 1.125em;
+    background-color: transparent;
+    color: $black;
+    font-weight: 300;
+    &::placeholder {
+      color: #6C6C6C;
+    }
+    &:focus {
+      border-color: #9CA0A0;
+      box-shadow: 0 .25em .4375em 0 rgba(47, 63, 67, 0.03), 0 .25em .3125em 0 rgba(0, 0, 0, 0.02) inset;
+    }
+    &:disabled{
+      pointer-events: none;
+      background: #F6F6F6 !important;
+      color: rgba(#000,.4);
+    }
+  }
+  textarea{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 6.125em;
+    resize: none;
+    border-radius: .55em;
+  }
+  &__field{
+    position: relative;
+  }
+  &._error{
+    input,
+    textarea{
+      border-color: $primary;
+      color: $primary;
+      &::placeholder{
+        color: $primary;
+      }
+    }
+    .fg__error-text{
+      display: block;
+    }
+  }
+  &__error-text{
+    margin-top: .375em;
+    color: $primary;
+    display: none;
+  }
+}
+
+.m-radio,
+.m-check{
+  position: relative;
+  input{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+.m-check,
+.m-radio{
+  font-weight: 300;
+  label{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding-left: 1.75em;
+    min-height: 1.25em;
+    padding-top: .0625em;
+    span{
+      font-size: .8125em;
+      line-height: 140%;
+    }
+    &:before,
+    &:after{
+      pointer-events: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      border: 1px solid #DADEDF;
+      width: 1.25em;
+      height: 1.25em;
+      @include bgImgSize(0);
+      transition: all .0s;
+    }
+    a{
+      text-decoration: underline;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &._big{
+    label{
+      padding-top: 0;
+      span{
+        font-size: 1em;
+        line-height: 140%;
+      }
+    }
+  }
+  &._gray{
+    label{
+      color: #6B6E72;
+    }
+  }
+  &._error{
+    input:not(:checked){
+      &~label:before{
+        border-color: #FF1515;
+      }
+    }
+  }
+}
+
+.m-check {
+  input {
+    &:checked+label {
+      &::before {
+        background-color: $primary;
+        border-color: $primary;
+        background-size: .75em auto;
+      }
+    }
+  }
+  label {
+    &:before {
+      border-radius: .3125em;
+      background-image: url(../img/check.svg);
+    }
+  }
+  &._gray{
+    label{
+      color: #787878;
+    }
+  }
+}
+
+.m-radio{
+  input:checked~label{
+    &:before{
+      border: none;
+      background-size: 100% auto;
+    }
+  }
+  label{
+    &:before{
+      border-radius: 50%;
+      background-image: url(../img/radio.svg);
+    }
+    span{
+      display: block;
+      line-height: 157%;
+      color: #5B626C;
+      margin-top: .125em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .fg{
+    font-size: .89em;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="main-info__inner">
+        <div class="main-info__col">
+            <div class="main-news">
+                <div class="text16 text14-tablet blue-text2 light-text">
+                    Наш блог
+                </div>
+                <div class="text22 text20-tablet medium-text blue-text">
+                    Новости и статьи
+                </div>
+
+                <div class="main-news__grid _mt24 _mt16-tablet">
+                    @@include('../cards/_blog-card.html',{
+                    "img":"blog-img",
+                    "title":"Статья",
+                    "desc":"Рентал Инжиниринг установила Scanclimber SC4000 на Чепецком механическом заводе.",
+                    })
+                    @@include('../cards/_blog-card.html',{
+                    "img":"blog-img2",
+                    "title":"Новость",
+                    "desc":"Реконструкция Ленинградского <span class='_no-wrap'>вокзала 2026</span>. Мачтовая платформа Scanclimber SC4000 от Рентал инжиниринг.",
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="main-info__col2">
+            <div class="main-site">
+                <div class="text22 text20-tablet medium-text blue-text">
+                    Сайт компании
+                </div>
+                <a href="" class="main-site__link _mt24 _mt16-tablet">
+                    <img src="img/site.webp" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

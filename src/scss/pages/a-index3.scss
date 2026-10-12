@@ -1,0 +1,115 @@
+.main-catalog{
+  &__inner{
+    border-radius: 0.625em;
+    border: $border;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.catalog-link{
+  border-bottom: $border;
+  color: $primary;
+  width: 50%;
+  &._hover{
+    .catalog-link__show{
+      background: linear-gradient(90deg, #36418F 0%, #5461B9 100%);
+      color: $white;
+    }
+    svg{
+      transform: translateX(.875em);
+    }
+    path{
+      fill: $white;
+    }
+    .catalog-link__hidden{
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+  &:last-child{
+    border-bottom: none;
+  }
+  &__show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.625em;
+    padding: 0 2.125em 0 2.5em;
+    svg{
+      width: 2.1875em;
+    }
+  }
+  &__hidden{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transition: all .3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__img{
+    height: 100%;
+    width: 100%;
+    @include imgCover(0);
+    border-radius: 0 .625em .625em 0;
+    &:after{
+      height: 7.5em;
+      background: linear-gradient(180deg, rgba(2, 48, 106, 0.70) 0.13%, rgba(2, 48, 106, 0.00) 99.89%);
+    }
+  }
+  &__items{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    padding: 1.44em 1.32em;
+    gap: .5em;
+    width: 100%;
+  }
+  &__item{
+    border-radius: 6.25rem;
+    border: $border;
+    padding: 0 1em;
+    height: 1.6875em;
+    text-transform: uppercase;
+    color: $white;
+    @include center;
+    span{
+      font-size: .5625em;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .catalog-link{
+    width: 100%;
+    &._hover {
+      svg {
+        transform: translateX(.25em);
+      }
+    }
+    &__hidden{
+      display: none;
+    }
+    &__show{
+      height: 3.75em;
+      padding: 0 1.25em;
+      svg{
+        width: 2em;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+
+}

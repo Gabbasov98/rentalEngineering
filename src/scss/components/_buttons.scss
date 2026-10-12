@@ -1,0 +1,52 @@
+@import "../vars";
+.m-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0 1.5em;
+    height: 2.75em;
+    border-radius: 6.25em;
+    &:focus {
+        box-shadow: none;
+    }
+    span{
+        font-size: .875em;
+    }
+}
+
+.m-btn-blue{
+    background: linear-gradient(90deg, #4863EC 0%, #36408C 100%);
+    color: $white;
+    &:hover{
+        opacity: .9;
+        color: $white;
+    }
+}
+
+.m-btn-white{
+    color: $primary;
+    background: linear-gradient(90deg, #FFF 0%, #DDD 100%);
+    &:hover{
+        opacity: .9;
+        color: $primary;
+    }
+}
+
+.m-btn-white-outline{
+    color: $white;
+    border: $border;
+    &:hover{
+        background-color: #E4EAF1;
+        color: $primary;
+    }
+}
+
+.m-btn-blue-outline{
+    color: #4354CC;
+    border: 2px solid #4354CC;
+    &:hover{
+        background-color: #4354CC;
+        color: $white;
+    }
+}

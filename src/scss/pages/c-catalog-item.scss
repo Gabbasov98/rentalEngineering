@@ -1,0 +1,193 @@
+.catalog-props,
+.catalog-detail{
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 1.875em));
+    gap: 2em 3.75em;
+  }
+}
+
+.catalog-item{
+  &__grid{
+    margin-top: 1.81em;
+    display: grid;
+    grid-template-columns: 35em calc(100% - 38.75em);
+    gap: 0 3.75em;
+    position: relative;
+    min-height: 26.25em;
+  }
+  .h1{
+    max-width: 15.33em;
+  }
+  &__props{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  &__prop{
+    font-family: $font2;
+    &-title{
+      color: $primary;
+      font-weight: 600;
+    }
+    &-desc{
+      margin-top: .3em;
+      font-size: .8125em;
+      line-height: 120%;
+      color: #666;
+    }
+  }
+  &__bottom{
+    display: flex;
+    gap: 3em;
+  }
+  &__prices{
+    font-family: $font2;
+    &-btn{
+      padding: 0 2.5em;
+      min-width: 11.5em;
+      height: 3em;
+      margin-top: 1.25em;
+      font-family: $font1;
+      span{
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.gallery-slider{
+  &__img{
+    border-radius: .625em;
+    @include imgCover(75%);
+  }
+  @media screen and (min-width: 993px){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35em;
+    .swiper-pagination{
+      display: none;
+    }
+  }
+  &__fraction{
+    position: absolute;
+    right: .875em;
+    bottom: .875em;
+    padding: 0 .625em;
+    height: 1.625em;
+    color: $white;
+    background-color: rgba($primary,.5);
+    border-radius: 6.25em;
+    font-size: 1em;
+    letter-spacing: .05em;
+    @include sameNumWidth;
+    z-index: 2;
+    @include center;
+    font-family: $font2;
+  }
+}
+
+.swiper-pagination-fraction{
+  position: absolute;
+  right: .875em;
+  bottom: .875em;
+  padding: 0 .625em;
+  height: 1.625em;
+  color: $white;
+  background-color: rgba($primary,.5);
+  border-radius: 6.25em;
+  width: auto;
+  left: unset;
+  font-size: 1em;
+  letter-spacing: .05em;
+  font-family: $font2;
+  @include sameNumWidth;
+  margin: 0;
+}
+
+.swiper-pagination-current,
+.swiper-pagination-total{
+  font-size: 1em;
+  letter-spacing: .05em;
+}
+
+.catalog-detail{
+  .filter{
+    margin-bottom: 2.25em;
+  }
+  &__desc{
+    line-height: 144%;
+  }
+  &__more{
+    margin-top: .625em;
+  }
+}
+
+
+
+
+@media screen and (max-width: 992px){
+  .catalog-item{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+    &__bottom{
+
+    }
+  }
+
+  .gallery-slider{
+    margin-top: 1.5em;
+    .swiper-nav{
+      display: none;
+    }
+    .swiper-pagination{
+      margin-top: .5em;
+    }
+    &__fraction{
+      font-size: .875em;
+      bottom: 2em;
+    }
+  }
+
+  .catalog-detail{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+    .text{
+      p,li{
+        font-size: .875em;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .catalog-item{
+    &__props{
+      display: grid;
+      grid-template-columns: repeat(2,calc(50% - 1.125em));
+      gap: 1.25em 2.25em;
+    }
+    &__bottom{
+      gap: 0;
+      justify-content: space-between;
+    }
+    &__prices{
+      .text20{
+        margin-top: .125em;
+      }
+      &-btn{
+        min-width: 10em;
+        padding: 0;
+        height: 2.625em;
+        margin-top: 1.25em;
+        span{
+          font-size: .8125em;
+        }
+      }
+    }
+  }
+}

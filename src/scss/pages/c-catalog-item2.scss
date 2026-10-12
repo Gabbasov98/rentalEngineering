@@ -1,0 +1,104 @@
+.prop-item{
+  display: grid;
+  grid-template-columns: repeat(2,calc(50% - 1em));
+  gap: 2em;
+  padding: 1em 0;
+  border-bottom: $border;
+  &:last-child{
+    border-bottom: none;
+  }
+  &__title,
+  &__desc{
+    font-size: 1em;
+    line-height: 113%;
+  }
+  &__title{
+    color: #666;
+  }
+  &__desc{
+    font-weight: 500;
+    color: #222222;
+  }
+}
+
+.docs{
+  &__items{
+    display: flex;
+    gap: 1.125em;
+    flex-wrap: wrap;
+  }
+}
+
+.docs-slider{
+  .swiper-container{
+    width: calc(100% + 1.125em);
+  }
+  .swiper-slide{
+    width: auto;
+    padding-right: 1.125em;
+  }
+}
+
+.doc-card{
+  padding: 1.25em;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em;
+  border: $border;
+  img{
+    width: 1.875em;
+    margin-right: 1em;
+  }
+  &__size{
+    font-size: 0.8125em;
+    line-height: 120%;
+    color: #aaa;
+    font-family: $font2;
+    font-weight: 500;
+    margin-top: .4em;
+  }
+}
+
+.catalog-props{
+  &__grid{
+    margin-top: 1em;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .catalog-props{
+    &__grid{
+      grid-template-columns: 100%;
+      gap: 0;
+    }
+  }
+
+  .prop-item{
+    padding: .75em 0;
+    &__title,
+    &__desc{
+      font-size: .75em;
+      line-height: 133%;
+    }
+  }
+
+  .doc-card{
+    padding: .75em 1.25em;
+    img{
+      width: 1.375em;
+      margin-right: .625em;
+    }
+    &__size{
+      font-size: 0.75em;
+      margin-top: .2em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .doc-card{
+    width: 100%;
+  }
+}

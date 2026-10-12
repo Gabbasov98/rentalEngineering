@@ -1,0 +1,88 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Наши клиенты", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="clients-page m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>Наши клиенты</span></li>
+                        </ul>
+                    </div>
+                    <h1 class="text30 medium-text blue-text">
+                        Наши клиенты
+                    </h1>
+                    <div class="clients-page__grid">
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img2",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img3",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img4",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img2",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img3",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img4",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img2",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img3",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img4",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img2",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img3",
+                        })
+                        @@include('components/cards/_client-card.html',{
+                        "img":"client-img4",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-price m-section">
+                @@include('components/page-blocks/_get-price.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

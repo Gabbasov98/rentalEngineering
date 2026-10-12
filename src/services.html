@@ -1,0 +1,114 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Услуги", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="about-main m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>Услуги</span></li>
+                        </ul>
+                    </div>
+                    <div class="about-main__top">
+                        <h1 class="text30 medium-text blue-text">
+                            Сервис и техническое обслуживание
+                        </h1>
+                    </div>
+                    <div class="text text-big _mt24">
+                        <h3>
+                            Поддерживаем подъемное оборудование в рабочем состоянии — от монтажа и пусконаладки до ремонта и регулярного обслуживания.
+                        </h3>
+                        <p>
+                            Специалисты Rental Engineering выполняют сервисные работы с грузопассажирскими подъемниками и мачтовыми рабочими платформами VECTOR и Scanclimber.
+                        </p>
+                    </div>
+                    <div class="about-main__images _mt48">
+                        <div class="info-group__img">
+                            <img src="img/info-img.webp" alt="">
+                        </div>
+                        <div class="info-group__img">
+                            <img src="img/info-img2.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="complex m-section">
+                <div class="container">
+                    <div class="text18 text14-tablet blue-text2">
+                        Комплексный подход
+                    </div>
+                    <div class="_mt8">
+                        <div class="text30 text20-tablet medium-text blue-text">
+                            Наши услуги и запчасти
+                        </div>
+                    </div>
+                    <div class="complex__grid">
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Техническое <br> обслуживание",
+                        "desc":"Проверяем состояние оборудования и выполняем необходимые работы для его надежной эксплуатации.",
+                        })
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Ремонт <br> оборудования",
+                        "desc":"Проводим диагностику и устраняем неисправности непосредственно на объекте.",
+                        })
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Монтаж <br>и демонтаж",
+                        "desc":"Выполняем установку и демонтаж подъемного оборудования силами квалифицированных специалистов.",
+                        })
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Пусконаладочные <br>работы",
+                        "desc":"Настраиваем оборудование и подготавливаем его к безопасной эксплуатации.",
+                        })
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Запчасти <br> и комплектующие",
+                        "desc":"Поставляем оригинальные запасные части и комплектующие для ремонта и обслуживания.",
+                        })
+                        @@include('components/cards/_complex-item.html',{
+                        "title":"Профессиональные <br> лифтеры",
+                        "desc":"Предоставляем профессионально обученных лифтеров для работы на грузопассажирских подъемниках.",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="services m-section">
+                <div class="container">
+                    <div class="services__grid">
+                        @@include('components/cards/_service-item.html',{
+                        "title":"Инструкции",
+                        "img":"service-img",
+                        })
+                        @@include('components/cards/_service-item.html',{
+                        "title":"Запчасти",
+                        "img":"service-img2",
+                        })
+                        @@include('components/cards/_service-item.html',{
+                        "title":"Подъемники",
+                        "img":"service-img3",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-price get-price2 m-section">
+                @@include('components/page-blocks/_get-price2.html')
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
