@@ -26,7 +26,10 @@
 
 @media screen and (max-width: 992px){
   .m-section{
-    padding:  2em 0;
+    padding:  1.5625em 0;
+    &--small{
+      padding: 1.25em 0;
+    }
   }
 }
 

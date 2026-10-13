@@ -68,6 +68,7 @@
 
 @media screen and (max-width: 992px){
   .catalog-props{
+    padding: 1.25em 0 .5em;
     &__grid{
       grid-template-columns: 100%;
       gap: 0;
@@ -81,6 +82,10 @@
       font-size: .75em;
       line-height: 133%;
     }
+  }
+
+  .docs{
+    padding: 1.25em 0 1.125em;
   }
 
   .doc-card{

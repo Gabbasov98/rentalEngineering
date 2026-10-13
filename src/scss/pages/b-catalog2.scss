@@ -205,6 +205,13 @@
         }
       }
     }
+    &._gray{
+      .seo__inner{
+        &:before{
+          background: linear-gradient(-90deg, #6C7CE1 0%, #374390 100%);
+        }
+      }
+    }
     .text{
       li,
       p{

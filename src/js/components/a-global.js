@@ -4,7 +4,11 @@ $("._tab").click(function() {
     $(parentBlock).find("._tab").removeClass("_active")
     $(this).addClass("_active")
     $(parentBlock).find(".tab-content").removeClass("_active")
+    $(parentBlock).find(".tab-content").removeClass("_active2")
     $(parentBlock).find(`.${tabId}`).addClass("_active")
+    setTimeout(()=>{
+        $(parentBlock).find(`.${tabId}`).addClass("_active2")
+    },100)
 })
 
 $(".qa-card__show").click(function() {

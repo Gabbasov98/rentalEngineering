@@ -129,6 +129,7 @@
 
 @media screen and (max-width: 992px){
   .catalog-item{
+    padding-bottom: 1em;
     &__grid{
       grid-template-columns: 100%;
     }
@@ -152,6 +153,12 @@
   }
 
   .catalog-detail{
+    padding: 1em 0 1.25em;
+    overflow: hidden;
+    &__inner{
+      padding-top: 2em;
+      border-top: 1px solid rgba($black,.15);
+    }
     &__grid{
       grid-template-columns: 100%;
     }

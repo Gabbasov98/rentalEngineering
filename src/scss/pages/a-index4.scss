@@ -23,6 +23,16 @@
       pointer-events: none;
     }
   }
+  .tab-content{
+    .slider{
+      transition: all .3s;
+      //transition-delay: .2s;
+      opacity: 0;
+    }
+    &._active2 .slider{
+      opacity: 1;
+    }
+  }
 }
 
 .products-slider{

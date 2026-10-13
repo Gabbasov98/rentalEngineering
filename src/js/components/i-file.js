@@ -1,21 +1,30 @@
-let fileInput = document.querySelector("[data-upload-id='file-input']")
+const odometers = document.querySelectorAll("._number-animation");
 
-if(fileInput){
-    console.log(fileInput)
-    const upload = new FileUploadWithPreview.FileUploadWithPreview('file-input');
-
-    upload.options.multiple = true
-
-    $(document).on('change', '.input-container input', function(e) {
-        $(this).parents(".file-input").addClass("_uploaded")
-    })
-
-    $(document).on('click', '.image-preview-item-clear', function(e) {
-        let count = $(this).parents(".file-input").find(".image-preview-item").length
-        if(count === 1){
-            $(this).parents(".file-input").removeClass("_uploaded")
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const targetValue = parseInt(el.getAttribute("data-end"), 10);
+            el.innerHTML = targetValue;
+            observer.unobserve(el);
         }
-    })
-}
+    });
+}, {
+    threshold: 0.5
+});
 
+odometers.forEach(el => {
+    let format = 'd'
 
+    if(el.hasAttribute("data-thousands-separate")) {
+        // format = '( ddd),dd'
+    }
+    new Odometer({
+        el: el,
+        value: 0,
+        format,
+        theme: 'default'
+    });
+
+    observer.observe(el);
+});

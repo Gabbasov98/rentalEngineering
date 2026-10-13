@@ -9,6 +9,7 @@
     <meta name="color-scheme" content="light only">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/odometer-theme-default.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <title>Главная</title>
@@ -59,14 +60,14 @@
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <div class="gallery-slider__img">
+                                                <a href="img/gallery.webp" data-fancybox="gallery" class="gallery-slider__img _scale-img">
                                                     <img src="img/gallery.webp" alt="">
-                                                </div>
+                                                </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="gallery-slider__img">
+                                                <a href="img/gallery.webp" data-fancybox="gallery" class="gallery-slider__img _scale-img">
                                                     <img src="img/gallery.webp" alt="">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -160,60 +161,62 @@
 
             <div class="catalog-detail m-section">
                 <div class="container">
-                    <div class="filter">
-                        <div class="filter-slider slider">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="filter__item _active">
-                                            <span>Обзор</span>
+                    <div class="catalog-detail__inner">
+                        <div class="filter">
+                            <div class="filter-slider slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="filter__item _active">
+                                                <span>Обзор</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="filter__item">
+                                                <span>Характеристики</span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="filter__item">
+                                                <span>Документация</span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <a href="" class="filter__item">
-                                            <span>Характеристики</span>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="" class="filter__item">
-                                            <span>Документация</span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="catalog-detail__grid">
-                        <div class="catalog-detail__col">
-                            <div class="text22 text18-tablet medium-text">
-                                Описание
-                            </div>
-                            <div class="_mt20 _mt12-tablet">
-                                <div class="catalog-detail__desc text18 text14-tablet">
-                                    Грузопассажирский  подъемник VECTOR SC 200  - это строительный подъемник, предназначенный для подъема строительных материалов и персонала общей массой до 2000 кг  на высоту до 500 метров. Данный подъемник оборудован всеми необходимыми системами безопасности.
+                        <div class="catalog-detail__grid">
+                            <div class="catalog-detail__col">
+                                <div class="text22 text18-tablet medium-text">
+                                    Описание
+                                </div>
+                                <div class="_mt20 _mt12-tablet">
+                                    <div class="catalog-detail__desc text18 text14-tablet">
+                                        Грузопассажирский  подъемник VECTOR SC 200  - это строительный подъемник, предназначенный для подъема строительных материалов и персонала общей массой до 2000 кг  на высоту до 500 метров. Данный подъемник оборудован всеми необходимыми системами безопасности.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="catalog-detail__col2 _toggle-more-parent">
-                            <div class="text22 text18-tablet medium-text">
-                                Преимущества
-                            </div>
-                            <div class="text _mt16 _mt12-tablet">
-                                <p>
-                                    Подъемник оборудован просторной кабиной, сваренной из качественных стальных профилей. Кабина может быть укомплектована специальным местом для оператора подъемника, благодаря которому он может эффективнее выполнять свою работу и не занимать полезное пространство в кабине.
-                                    <br>
-                                    Основные узлы и механизмы подъемника (мачтовые секции, кабина, стеновые крепления и т.д.) горячеоцинкованны, что увеличивает срок службы подъемника и сохраняет хороший внешний вид оборудования.
-                                </p>
-                                <p>
-                                    Аренда грузопассажирских подъемников весьма удобна при строительстве, отделке или же реконструкции жилых и производственных зданий. Аренда мачтовых подъемников позволяет сократить расходы на покупку дорогостоящего оборудования, последующего его хранения и возможного ремонта. Современные грузопассажирские подъемники, это быстрота их монтажа, удобство использования и непревзойденная надежность. Нашим клиентам мы предлагаем полный спектр услуг в который входят: доставка и вывоз грузопассажирского подъемника на объект заказчика, профессиональный монтаж и демонтаж подъемника....
-                                </p>
-                            </div>
-                            <button class="catalog-detail__more _toggle-more">
-                                <span class="_view1">
+                            <div class="catalog-detail__col2 _toggle-more-parent">
+                                <div class="text22 text18-tablet medium-text">
+                                    Преимущества
+                                </div>
+                                <div class="text _mt16 _mt12-tablet">
+                                    <p>
+                                        Подъемник оборудован просторной кабиной, сваренной из качественных стальных профилей. Кабина может быть укомплектована специальным местом для оператора подъемника, благодаря которому он может эффективнее выполнять свою работу и не занимать полезное пространство в кабине.
+                                        <br>
+                                        Основные узлы и механизмы подъемника (мачтовые секции, кабина, стеновые крепления и т.д.) горячеоцинкованны, что увеличивает срок службы подъемника и сохраняет хороший внешний вид оборудования.
+                                    </p>
+                                    <p>
+                                        Аренда грузопассажирских подъемников весьма удобна при строительстве, отделке или же реконструкции жилых и производственных зданий. Аренда мачтовых подъемников позволяет сократить расходы на покупку дорогостоящего оборудования, последующего его хранения и возможного ремонта. Современные грузопассажирские подъемники, это быстрота их монтажа, удобство использования и непревзойденная надежность. Нашим клиентам мы предлагаем полный спектр услуг в который входят: доставка и вывоз грузопассажирского подъемника на объект заказчика, профессиональный монтаж и демонтаж подъемника....
+                                    </p>
+                                </div>
+                                <button class="catalog-detail__more _toggle-more">
+                                    <span class="_view1">
                                     Читать полностью
                                 </span>
-                                <span class="_view2">Скрыть</span>
-                            </button>
+                                    <span class="_view2">Скрыть</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -714,6 +717,7 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="js/odometer.js"></script>
     <script src="js/main.min.js"></script>
 
 </body>
