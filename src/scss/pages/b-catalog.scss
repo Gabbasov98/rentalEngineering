@@ -79,6 +79,7 @@
 
 .filter{
   margin-bottom: 1.5em;
+  &__check label,
   &__item,
   &__clear{
     height: 2.3125em;
@@ -88,12 +89,28 @@
       font-size: .875em;
     }
   }
-  &__item{
+  &__item,
+  &__check label{
     padding: 0 1.5em;
     border-radius: 6.25em;
     border: $border;
     color: $primary;
     transition: all .3s;
+  }
+  &__check {
+    input{
+      &:hover ~ label{
+        border-color: $primary;
+      }
+      &:checked ~ label{
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+    }
+  }
+  &__item{
+
     &:hover{
       border-color: $primary;
     }

@@ -131,10 +131,8 @@
   .catalog-item{
     padding-bottom: 1em;
     &__grid{
+      margin: 0;
       grid-template-columns: 100%;
-    }
-    &__bottom{
-
     }
   }
 
