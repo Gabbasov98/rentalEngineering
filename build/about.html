@@ -18,17 +18,170 @@
 
 <body class="m-page">
     <div class="wrapper">
-        <header class="header">
+        <header class="header _open">
             <div class="container">
-                <div class="header__inner">
+                <div class="header__inner _flex-between">
                     <a href="" class="header__logo">
-                        <img src="img/logo.svg" alt="">
+                        <img src="img/logo.svg" alt="" class="_black">
+                        <img src="img/logo-white.svg" alt="" class="_white">
                     </a>
 
-                    <div class="menu">
+                    <div class="header__right">
+                        <div class="header-top _flex">
+                            <div class="footer-contacts">
+                                <div class="footer-contacts__wrap _flex">
+                                    <a href="" class="footer-contacts__tg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 0C6.71572 0 0 6.71572 0 15C0 23.2843 6.71572 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71572 23.2843 0 15 0ZM22.7964 9.48844L20.1323 22.207C20.1001 22.3609 20.0297 22.5041 19.9276 22.6237C19.8256 22.7432 19.6951 22.8352 19.5483 22.8911C19.4014 22.9471 19.2428 22.9653 19.0871 22.9439C18.9314 22.9226 18.7835 22.8625 18.6571 22.7691L14.7819 19.9062L12.4342 22.121C12.4034 22.15 12.3672 22.1726 12.3277 22.1874C12.2881 22.2023 12.246 22.2091 12.2038 22.2075C12.1616 22.2059 12.1201 22.1959 12.0818 22.1781C12.0435 22.1603 12.0091 22.135 11.9807 22.1038L11.9302 22.0484L12.3381 18.1006L19.6907 11.3828C19.7271 11.3496 19.7497 11.304 19.7541 11.255C19.7585 11.206 19.7444 11.1571 19.7145 11.118C19.6846 11.0789 19.6412 11.0524 19.5927 11.0437C19.5443 11.0351 19.4943 11.0449 19.4528 11.0712L10.0497 17.0226L6 15.6625C5.89232 15.6263 5.79847 15.5577 5.73133 15.4661C5.66419 15.3745 5.62704 15.2643 5.62499 15.1508C5.62293 15.0372 5.65607 14.9257 5.71986 14.8318C5.78364 14.7378 5.87495 14.6658 5.98125 14.6258L21.8262 8.65688C21.9484 8.61088 22.0807 8.59856 22.2094 8.62121C22.338 8.64387 22.4581 8.70065 22.5573 8.78564C22.6565 8.87062 22.731 8.98068 22.773 9.10431C22.8151 9.22795 22.8232 9.36061 22.7964 9.48844Z" fill="#36418F" />
+                                        </svg>
+                                    </a>
+                                    <div class="footer-contacts__items blue-text">
+                                        <a href="tel:84955147836" class="text18 text15-tablet blue-text-hover">
+                                            8 (495) 514-78-36
+                                        </a>
+                                        <a href="mailto:mail@rental-engineering.ru" class="text14 text13-tablet light-text blue-text-hover">
+                                            mail@rental-engineering.ru
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button data-modal="contactsModal" class="header-top__btn m-btn m-btn-blue">
+                                <span>Заказать звонок</span>
+                            </button>
+
+                            <div class="header-action _flex">
+                                <button class="burger">
+                                    <span class="burger__text text17">Меню</span>
+                                    <span class="burger__icon">
+                            <span></span>
+                                    <span></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
                         <nav class="nav">
-                            <a href="" class="nav__link"></a>
+                            <ul>
+                                <li class="active"><a href="">О компании</a></li>
+                                <li><a href="">Каталог техники</a></li>
+                                <li><a href="">Новости</a></li>
+                                <li><a href="">Наши клиенты</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
                         </nav>
+                    </div>
+                    <div class="menu">
+                        <div class="container">
+                            <div class="menu__inner">
+                                <div class="menu__col">
+                                    <div class="main-site">
+                                        <a href="" class="main-site__link">
+                                            <img src="img/site.webp" alt="">
+                                        </a>
+                                        <div class="_mt24">
+                                            <div class="h4">
+                                                Сайт компании VECTOR
+                                            </div>
+                                        </div>
+                                        <div class="_mt12">
+                                            <div class="text18">
+                                                Грузопассажирские подъемники от производителя
+                                            </div>
+                                        </div>
+                                        <div class="_flex _mt16">
+                                            <a href="" class="arrow-link">
+                                                <span>Перейти</span>
+                                                <img src="img/arrow-right.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu__col2">
+                                    <div class="menu-catalog">
+                                        <div class="menu-catalog__col">
+                                            <div class="menu-item _has-child">
+                                                <div class="menu-item__top">
+                                                    <div class="menu-item__title">
+                                                        ПРОДАЖА ПОДЪЕМНИКОВ
+                                                    </div>
+                                                </div>
+                                                <div class="menu-item__bottom">
+                                                    <ul>
+                                                        <li><a href="">Грузопассажирские подъемники</a></li>
+                                                        <li><a href="">Мачтовые рабочие платформы</a></li>
+                                                        <li><a href="">Грузовые подъемники</a></li>
+                                                        <li><a href="">Промышленные подъемники</a></li>
+                                                        <li><a href="">Строительные лифты</a></li>
+                                                        <li><a href="">Мачтовые подъемники</a></li>
+                                                        <li><a href="">Фасадные подъёмники</a></li>
+                                                        <li><a href="">Вертикальные строительные подъемники</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="menu-item">
+                                                <div class="menu-item__top">
+                                                    <div class="menu-item__title">
+                                                        <a href="">Аренда рабочих платформ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu-catalog__col2">
+                                            <div class="menu-item _has-child">
+                                                <div class="menu-item__top">
+                                                    <div class="menu-item__title">
+                                                        АРЕНДА ПОДЪЕМНИКОВ
+                                                    </div>
+                                                </div>
+                                                <div class="menu-item__bottom">
+                                                    <ul>
+                                                        <li><a href="">Аренда грузопассажирских подъемников</a></li>
+                                                        <li><a href="">Аренда фасадных подъемников</a></li>
+                                                        <li><a href="">Аренда мачтового подъемника</a></li>
+                                                        <li><a href="">Аренда грузового подъемника</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="menu-item _has-child">
+                                                <div class="menu-item__top">
+                                                    <div class="menu-item__title">
+                                                        РЕМОНТ И ЗАПЧАСТИ
+                                                    </div>
+                                                </div>
+                                                <div class="menu-item__bottom">
+                                                    <ul>
+                                                        <li><a href="">Запчасти</a></li>
+                                                        <li><a href="">Инструкции</a></li>
+                                                        <li><a href="">Наши услуги</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-nav">
+                                        <ul>
+                                            <li class="active"><a href="">О компании</a></li>
+                                            <li><a href="">Каталог техники</a></li>
+                                            <li><a href="">Новости</a></li>
+                                            <li><a href="">Наши клиенты</a></li>
+                                            <li><a href="">Контакты</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-search">
+                                        <img src="img/search.svg" alt="">
+                                        <div class="fg">
+                                            <input type="text" placeholder="Поиск на сайте">
+                                        </div>
+                                    </div>
+                                    <div class="menu-contacts">
+                                        <a href="" class="menu-contacts__link">+7 (495) 255-37-07</a>
+                                        <a href="" class="menu-contacts__link">+7 (495) 514-78-36</a>
+                                        <a href="" class="menu-contacts__link">mail@rental-engineering.ru</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,12 +197,17 @@
                             <li><span>О компании</span></li>
                         </ul>
                     </div>
-                    <div class="about-main__top">
-                        <h1 class="text30 medium-text blue-text">
-                            Компания «Рентал Инжиниринг» представляет на рынке России, Белоруссии и Казахстана грузопассажирские подъемники VECTOR и финские мачтовые рабочие платформы и грузопассажирские подъемники Scanclimber.
+                    <div class="about-main__top blue-text">
+                        <h1 class="h1">
+                            Компания «Рентал Инжиниринг»
                         </h1>
+                        <div class="_mt16">
+                            <h3 class="h3">
+                                Представляет на рынке России, Белоруссии и Казахстана грузопассажирские подъемники VECTOR и финские мачтовые рабочие платформы и грузопассажирские подъемники Scanclimber.
+                            </h3>
+                        </div>
                     </div>
-                    <div class="text text-big _mt32">
+                    <div class="text text-big _mt32 _mt16-tablet">
                         <p>
                             Благодаря своему качеству, надежности, простоте транспортировки и легкости обслуживания подъемная техника, продажа которой нами осуществляется, превосходно показала себя в эксплуатации.
                         </p>
@@ -163,7 +321,7 @@
                             Поднимаем ваш бизнес
                             <span class="_no-wrap">на новые вершины</span>
                         </div>
-                        <div class="solutions__desc text18">
+                        <div class="solutions__desc text18 text16-tablet">
                             Подбираем и поставляем подъемное оборудование для различных отраслей строительства, учитывая специфику проектов и требования к эксплуатации
                         </div>
                     </div>
@@ -173,7 +331,7 @@
                                 <img src="img/solution-img.webp" alt="">
                             </div>
                             <div class="solution-card__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Жилищное строительство
                                 </div>
                                 <div class="solution-card__desc text16">
@@ -187,7 +345,7 @@
                                 <img src="img/solution-img2.webp" alt="">
                             </div>
                             <div class="solution-card__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Коммерческое строительство
                                 </div>
                                 <div class="solution-card__desc text16">
@@ -201,7 +359,7 @@
                                 <img src="img/solution-img3.webp" alt="">
                             </div>
                             <div class="solution-card__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Промышленное строительство
                                 </div>
                                 <div class="solution-card__desc text16">
@@ -215,7 +373,7 @@
                                 <img src="img/solution-img4.webp" alt="">
                             </div>
                             <div class="solution-card__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Реконструкция <br> и реставрация
                                 </div>
                                 <div class="solution-card__desc text16">
@@ -229,7 +387,7 @@
                                 <img src="img/solution-img5.webp" alt="">
                             </div>
                             <div class="solution-card__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Специальное <br> строительство
                                 </div>
                                 <div class="solution-card__desc text16">
@@ -247,14 +405,15 @@
                     <div class="geography__inner">
                         <div class="geography__col">
                             <div class="geography__top">
-                                <div class="text30 blue-text medium-text">
+                                <div class="h1 blue-text medium-text">
                                     География работы
                                 </div>
-                                <div class="text18">
+                                <div class="text18 text16-tablet">
                                     Работаем с объектами в России, Беларуси и Казахстане, обеспечивая поставку оборудования, монтаж и техническое сопровождение проектов.
                                 </div>
                             </div>
-                            <img src="img/geography.svg" alt="" class="geography__img">
+                            <img src="img/geography.svg" alt="" class="geography__img _view1">
+                            <img src="img/geography-mob.svg" alt="" class="geography__img _view2">
                         </div>
                         <div class="geography__col2">
                             <div class="geography__items">
@@ -267,6 +426,17 @@
                                     <div class="text16">
                                         Главный офис и склад <br>
                                         Тел. +7 (495) 255-37-07
+                                    </div>
+                                </div>
+                                <div class="geography-item">
+                                    <div class="geography-item__top">
+                                        <div class="text20 medium-text">
+                                            Казань
+                                        </div>
+                                    </div>
+                                    <div class="text16">
+                                        Официальное представительство <br>
+                                        +7 (917) 901-84-41
                                     </div>
                                 </div>
                                 <div class="geography-item">
@@ -304,13 +474,13 @@
                                 <img src="img/info-img.webp" alt="">
                             </div>
                             <div class="info-group__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Квалифицированные <br> специалисты
                                 </div>
                                 <div class="info-group__desc">
                                     Специалисты «Рентал инжиниринг» имеют большой опыт обслуживания и эксплуатации подъемного оборудования. Наши бригады осуществляют выездной монтаж, демонтаж и ремонт данной техники, используя только оригинальные запчасти. Наша компания предоставляет услугу по шеф-монтажу оборудования для клиентов, также мы предлагаем услуги профессионально обученных лифтеров для работы на наших грузопассажирских подъемниках.
                                 </div>
-                                <div class="info-group__nav _flex _mt32">
+                                <div class="info-group__nav _flex _mt32 _mt16-tablet">
                                     <a href="" class="arrow-link">
                                         <span>Сервис и запчасти</span>
                                         <img src="img/arrow-right.svg" alt="">
@@ -324,13 +494,13 @@
                                 <img src="img/info-img2.webp" alt="">
                             </div>
                             <div class="info-group__content">
-                                <div class="text24 medium-text">
+                                <div class="h3">
                                     Надежная техника
                                 </div>
                                 <div class="info-group__desc">
                                     Каждый грузопассажирский подъемник VECTOR или рабочая платформа Scanclimber, которые мы предлагаем, зарегистрирована и сертифицирована органами технического надзора России, Белоруссии и Казахстана. Перед продажей и арендой техника проходит осмотр на работоспособность всех ее узлов и механизмов. Поэтому, выбирая нашу технику, заказчики могут быть абсолютно уверены в ее надежности даже при интенсивной эксплуатации в самых жестких условиях.
                                 </div>
-                                <div class="info-group__nav _flex _mt32">
+                                <div class="info-group__nav _flex _mt32 _mt16-tablet">
                                     <a href="" class="arrow-link">
                                         <span>Перейти в каталог</span>
                                         <img src="img/arrow-right.svg" alt="">
@@ -412,7 +582,9 @@
                             </div>
                             <div class="footer-contacts__wrap _flex _mt20 _mt16-tablet">
                                 <a href="" class="footer-contacts__tg">
-                                    <img src="img/tg.svg" alt="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                        <path d="M15 0C6.71572 0 0 6.71572 0 15C0 23.2843 6.71572 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71572 23.2843 0 15 0ZM22.7964 9.48844L20.1323 22.207C20.1001 22.3609 20.0297 22.5041 19.9276 22.6237C19.8256 22.7432 19.6951 22.8352 19.5483 22.8911C19.4014 22.9471 19.2428 22.9653 19.0871 22.9439C18.9314 22.9226 18.7835 22.8625 18.6571 22.7691L14.7819 19.9062L12.4342 22.121C12.4034 22.15 12.3672 22.1726 12.3277 22.1874C12.2881 22.2023 12.246 22.2091 12.2038 22.2075C12.1616 22.2059 12.1201 22.1959 12.0818 22.1781C12.0435 22.1603 12.0091 22.135 11.9807 22.1038L11.9302 22.0484L12.3381 18.1006L19.6907 11.3828C19.7271 11.3496 19.7497 11.304 19.7541 11.255C19.7585 11.206 19.7444 11.1571 19.7145 11.118C19.6846 11.0789 19.6412 11.0524 19.5927 11.0437C19.5443 11.0351 19.4943 11.0449 19.4528 11.0712L10.0497 17.0226L6 15.6625C5.89232 15.6263 5.79847 15.5577 5.73133 15.4661C5.66419 15.3745 5.62704 15.2643 5.62499 15.1508C5.62293 15.0372 5.65607 14.9257 5.71986 14.8318C5.78364 14.7378 5.87495 14.6658 5.98125 14.6258L21.8262 8.65688C21.9484 8.61088 22.0807 8.59856 22.2094 8.62121C22.338 8.64387 22.4581 8.70065 22.5573 8.78564C22.6565 8.87062 22.731 8.98068 22.773 9.10431C22.8151 9.22795 22.8232 9.36061 22.7964 9.48844Z" fill="#36418F" />
+                                    </svg>
                                 </a>
                                 <div class="footer-contacts__items blue-text">
                                     <a href="tel:84955147836" class="text18 text15-tablet blue-text-hover">
@@ -422,6 +594,7 @@
                                         mail@rental-engineering.ru
                                     </a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -471,6 +644,65 @@
 
         </footer>
     </div>
+
+    <div class="modal" id="contactsModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="h3 blue-text">
+                Арендовать
+            </div>
+            <div class="_mt8">
+                <div class="text18 medium-text blue-text">
+                    Грузопассажирский подъемник VECTOR SC 200
+                </div>
+            </div>
+            <form action="" class="contacts-form">
+                <div class="fg">
+                    <label>Ваше имя:</label>
+                    <input type="text">
+                </div>
+                <div class="fg">
+                    <label>Телефон:</label>
+                    <input type="tel">
+                </div>
+                <div class="fg">
+                    <label>Компания:</label>
+                    <input type="email">
+                </div>
+                <div class="fg">
+                    <label>Сообщение:</label>
+                    <textarea></textarea>
+                </div>
+                <div class="contacts-form__checks">
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>
+                            Я принимаю условия об обработке моих <a href="">персональных данных</a>
+                        </span>
+                        </label>
+                    </div>
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>
+                            Я согласен получать информационные <br>
+                            и рекламные сообщения на указанный
+                            email/телефон.
+                        </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="contacts-form__btn m-btn m-btn-blue">
+                    <span>Отправить заявку</span>
+                </button>
+            </form>
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>

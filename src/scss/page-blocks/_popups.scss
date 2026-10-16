@@ -43,30 +43,49 @@
     }
     &__dialog {
         background: #fff;
-        width: 67em;
+        width: 22.5em;
         max-width: calc(100% - 2em);
         position: relative;
         z-index: 3;
-        padding: 3em;
-        border-radius: 1.5em;
+        padding: 1.25em 1.25em 1.75em;
+        border-radius: .625em;
         display: inline-block;
-    }
-    &__top{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        box-shadow: 0 4px 40px 10px rgba(0, 0, 0, 0.25);
     }
     .close-btn{
         position: absolute;
         top: 1em;
         right: 1em;
     }
+    .contacts-form{
+        margin-top: 1em;
+        &__checks,
+        &__btn{
+            margin-top: -.25em;
+        }
+    }
+    .fg{
+        label{
+            display: block;
+            font-size: 1.0625em;
+            line-height: 120%;
+            margin-bottom: .5em;
+            color: $black2;
+        }
+        input{
+            height: 3em;
+            padding: 0 1em;
+        }
+        textarea{
+            height: 5.5em;
+            padding: .75em 1em;
+        }
+    }
 }
 
 .close-btn{
-    width: 1.5em;
+    width: 1em;
     @include center;
-    margin-left: 1em;
     flex-shrink: 0;
     img,svg{
         width: 100%;

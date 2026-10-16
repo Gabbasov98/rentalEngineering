@@ -62,7 +62,7 @@
     border-radius: .5em;
     display: grid;
     grid-template-columns: calc(100% - 23em) 21em;
-    gap: 2em;
+    gap: 1.5em 2em;
   }
   &__col2{
     padding-top: 3em;
@@ -77,9 +77,12 @@
     margin-top: -1.375em;
     display: block;
     width: 100%;
+    &._view2{
+      display: none;
+    }
   }
   &__items{
-    @include grid100gap(3em);
+    @include grid100gap(2em);
   }
   &__bottom{
     margin-top: auto;
@@ -97,10 +100,66 @@
 
 
 @media screen and (max-width: 992px){
+  .solutions{
+    &__top{
+      gap: .375em;
+    }
+    &__desc{
+      margin-top: .625em;
+    }
+    &__grid{
+      grid-template-columns: repeat(2,calc(50% - 1.125em));
+      gap: 2.25em;
+      margin-top: 2.25em;
+    }
+  }
 
+  .solution-card{
+    &__content{
+      margin-top: 1.5em;
+    }
+  }
+
+  .geography{
+    .container{
+      padding: 0;
+    }
+    &__inner{
+      padding: 2.5em 1em;
+      border-radius: 0;
+      grid-template-columns: 100%;
+    }
+    .h1{
+      font-size: 1.375em;
+    }
+    &__col2{
+      padding: 0;
+    }
+    &__img{
+      margin-top: -1.5em;
+    }
+    &__bottom{
+      padding-top: 1.5em;
+    }
+  }
 }
 
 
 @media screen and (max-width: 576px){
+  .solutions{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
 
+  .geography{
+    &__img{
+      &._view1{
+        display: none;
+      }
+      &._view2{
+        display: block;
+      }
+    }
+  }
 }

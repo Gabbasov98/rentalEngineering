@@ -37,7 +37,7 @@
   &__grid{
     display: grid;
     grid-template-columns: 21.25em calc(100% - 21.25em - 4.375em);
-    gap: 4.375em;
+    gap: 3.125em 4.375em;
   }
   &__col2{
     display: flex;
@@ -76,7 +76,33 @@
 
 
 @media screen and (max-width: 992px){
+  .contacts-main{
+    &__grid{
+      grid-template-columns: 100%;
+      gap: 2.5em;
+    }
+    &__col{
+      padding-bottom: 1.5em;
+      border-bottom: $border;
+    }
+  }
 
+  .contacts{
+    overflow: hidden;
+    &__grid{
+      grid-template-columns: 100%;
+    }
+    &__col2{
+      order: -1;
+    }
+    .map{
+      height: 33.75em;
+    }
+  }
+
+  .contacts-form{
+    margin-top: 1.5em;
+  }
 }
 
 

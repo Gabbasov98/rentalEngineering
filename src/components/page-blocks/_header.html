@@ -1,13 +1,153 @@
 <div class="container">
-    <div class="header__inner">
+    <div class="header__inner _flex-between">
         <a href="" class="header__logo">
-            <img src="img/logo.svg" alt="">
+            <img src="img/logo.svg" alt="" class="_black">
+            <img src="img/logo-white.svg" alt="" class="_white">
         </a>
 
-        <div class="menu">
+        <div class="header__right">
+            <div class="header-top _flex">
+                <div class="footer-contacts">
+                    <div class="footer-contacts__wrap _flex">
+                        @@include('../ui/_footer-contacts.html')
+                    </div>
+                </div>
+                <button data-modal="contactsModal" class="header-top__btn m-btn m-btn-blue">
+                    <span>Заказать звонок</span>
+                </button>
+
+                <div class="header-action _flex">
+                    <button class="burger">
+                        <span class="burger__text text17">Меню</span>
+                        <span class="burger__icon">
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
             <nav class="nav">
-                <a href="" class="nav__link"></a>
+                <ul>
+                    <li class="active"><a href="">О компании</a></li>
+                    <li><a href="">Каталог техники</a></li>
+                    <li><a href="">Новости</a></li>
+                    <li><a href="">Наши клиенты</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
             </nav>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="menu__inner">
+                    <div class="menu__col">
+                        <div class="main-site">
+                            <a href="" class="main-site__link">
+                                <img src="img/site.webp" alt="">
+                            </a>
+                            <div class="_mt24">
+                                <div class="h4">
+                                    Сайт компании VECTOR
+                                </div>
+                            </div>
+                            <div class="_mt12">
+                                <div class="text18">
+                                    Грузопассажирские подъемники от производителя
+                                </div>
+                            </div>
+                            <div class="_flex _mt16">
+                                <a href="" class="arrow-link">
+                                    <span>Перейти</span>
+                                    <img src="img/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu__col2">
+                        <div class="menu-catalog">
+                            <div class="menu-catalog__col">
+                                <div class="menu-item _has-child">
+                                    <div class="menu-item__top">
+                                        <div class="menu-item__title">
+                                            ПРОДАЖА ПОДЪЕМНИКОВ
+                                        </div>
+                                    </div>
+                                    <div class="menu-item__bottom">
+                                        <ul>
+                                            <li><a href="">Грузопассажирские подъемники</a></li>
+                                            <li><a href="">Мачтовые рабочие платформы</a></li>
+                                            <li><a href="">Грузовые подъемники</a></li>
+                                            <li><a href="">Промышленные подъемники</a></li>
+                                            <li><a href="">Строительные лифты</a></li>
+                                            <li><a href="">Мачтовые подъемники</a></li>
+                                            <li><a href="">Фасадные подъёмники</a></li>
+                                            <li><a href="">Вертикальные строительные подъемники</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="menu-item__top">
+                                        <div class="menu-item__title">
+                                            <a href="">Аренда рабочих платформ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-catalog__col2">
+                                <div class="menu-item _has-child">
+                                    <div class="menu-item__top">
+                                        <div class="menu-item__title">
+                                            АРЕНДА ПОДЪЕМНИКОВ
+                                        </div>
+                                    </div>
+                                    <div class="menu-item__bottom">
+                                        <ul>
+                                            <li><a href="">Аренда грузопассажирских подъемников</a></li>
+                                            <li><a href="">Аренда фасадных подъемников</a></li>
+                                            <li><a href="">Аренда мачтового подъемника</a></li>
+                                            <li><a href="">Аренда грузового подъемника</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item _has-child">
+                                    <div class="menu-item__top">
+                                        <div class="menu-item__title">
+                                            РЕМОНТ И ЗАПЧАСТИ
+                                        </div>
+                                    </div>
+                                    <div class="menu-item__bottom">
+                                        <ul>
+                                            <li><a href="">Запчасти</a></li>
+                                            <li><a href="">Инструкции</a></li>
+                                            <li><a href="">Наши услуги</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-nav">
+                            <ul>
+                                <li class="active"><a href="">О компании</a></li>
+                                <li><a href="">Каталог техники</a></li>
+                                <li><a href="">Новости</a></li>
+                                <li><a href="">Наши клиенты</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-search">
+                            <img src="img/search.svg" alt="">
+                            <div class="fg">
+                                <input type="text" placeholder="Поиск на сайте">
+                            </div>
+                        </div>
+                        <div class="menu-contacts">
+                            <a href="" class="menu-contacts__link">+7 (495) 255-37-07</a>
+                            <a href="" class="menu-contacts__link">+7 (495) 514-78-36</a>
+                            <a href="" class="menu-contacts__link">mail@rental-engineering.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

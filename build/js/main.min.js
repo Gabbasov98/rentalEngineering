@@ -16,6 +16,14 @@ $(".qa-card__show").click(function() {
     $(this).siblings(".qa-card__hidden").slideToggle()
 })
 
+$("._has-child .menu-item__top").click(function() {
+    if(window.innerWidth>992){
+        return
+    }
+    $(this).parents(".menu-item").toggleClass("_active")
+    $(this).siblings(".menu-item__bottom").slideToggle()
+})
+
 $("._toggle-more").click(function() {
     $(this).parents("._toggle-more-parent").toggleClass("_show-all")
 })
