@@ -1,38 +1,4 @@
-<div id="map" class="map"></div>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036"></script>
-<script>
-    ymaps.ready(initMap);
-
-    function initMap() {
-        var coords = [55.765762, 37.616162]; // широта, долгота
-
-        var map = new ymaps.Map('map', {
-            center: coords,
-            zoom: 16,
-            controls: ['zoomControl', 'fullscreenControl']
-        });
-
-        map.behaviors.disable('scrollZoom');
-
-        let iconImageSize = [172,128]
-        let iconImageOffset = [-86,-64]
-
-        if(window.innerWidth<992){
-            iconImageSize = [54,40]
-            iconImageOffset = [-27,-20]
-        }
-
-        var placemark = new ymaps.Placemark(coords, {
-            balloonContentHeader: 'Окно APARTHOTEL',
-            balloonContentBody: 'Описание'
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/map-logo.svg',
-            iconImageSize,
-            iconImageOffset
-        });
-
-        map.geoObjects.add(placemark);
-    }
-</script>
+<div id="map" class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6effb765ec29941356eb9b6da396fe7734949f0006b4921100618faf6685673e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+</div>
 

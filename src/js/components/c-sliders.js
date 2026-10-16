@@ -5,14 +5,19 @@ function Sliders() {
     sliders.forEach((slider,index) => {
         slider.setAttribute("data-slider-id",index)
 
+        let autoplay = false
+
         let pagination = {
             el: `.slider[data-slider-id="${index}"] .swiper-pagination`,
             type: 'bullets',
             clickable: true,
         }
 
-        if(slider.classList.contains("gallery-slider")){
-            // pagination.type = 'fraction'
+        if(slider.classList.contains("_autoplay")){
+            autoplay = {
+                delay: 3000,
+                disableOnInteraction: false
+            }
         }
         function renderFraction(current,all) {
             slider.querySelector("._current").innerHTML = current
@@ -32,7 +37,7 @@ function Sliders() {
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
-
+            autoplay,
             navigation: {
                 nextEl: `.slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.slider[data-slider-id="${index}"] .swiper-button-prev`,
