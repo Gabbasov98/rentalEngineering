@@ -5,7 +5,6 @@
   background: $white;
   box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.10);
   &._open{
-    padding-right: var(--scrollWidth);
     .menu{
       opacity: 1;
       pointer-events: unset;
@@ -115,6 +114,9 @@
   width: 100%;
   background-color: transparent;
   box-shadow: none;
+  &._open {
+    padding-right: var(--scrollWidth);
+  }
   &:not(._open){
     .header__logo{
       ._black{
