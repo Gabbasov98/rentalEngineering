@@ -26,6 +26,9 @@
     .text{
       overflow: hidden;
       height: 12em;
+      *:first-child~*{
+        opacity: 0;
+      }
     }
   }
 }
@@ -273,7 +276,12 @@
   .catalog-info{
     &:not(._show-all){
       .text{
+        display: block;
         height: 14.5em;
+        p:first-child{
+          @include truncate(11);
+        }
+
       }
     }
   }

@@ -145,6 +145,16 @@
   .header{
     padding: 1em 0;
     &._open{
+      &:before{
+        content: '';
+        position: absolute;
+        z-index: 11;
+        width: 100%;
+        height: 6em;
+        left: 0;
+        top: 0;
+        background: #F4F4F4;
+      }
       .menu{
         pointer-events: unset;
         opacity: 1;
