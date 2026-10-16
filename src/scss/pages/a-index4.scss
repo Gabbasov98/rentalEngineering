@@ -24,13 +24,23 @@
     }
   }
   .tab-content{
-    .slider{
+    .slider__wrap{
       transition: all .3s;
       //transition-delay: .2s;
       opacity: 0;
     }
-    &._active2 .slider{
-      opacity: 1;
+    .swiper-nav{
+      //display: none;
+      pointer-events: none;
+    }
+    &._active2{
+      .swiper-nav{
+        pointer-events: unset;
+        //display: flex;
+      }
+      .slider__wrap{
+        opacity: 1;
+      }
     }
   }
 }
