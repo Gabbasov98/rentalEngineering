@@ -23,9 +23,9 @@
 .catalog-detail__col2,
 .catalog-info{
   .text{
-    transition: max-height 0.4s ease;
+    transition: height 0.4s ease;
     interpolate-size: allow-keywords; // разрешает анимацию к auto
-    max-height: unset;
+    height: auto;
     *{
       transition: all .3s;
     }
@@ -33,7 +33,7 @@
   &:not(._show-all){
     .text{
       overflow: hidden;
-      max-height: 12em;
+      height: 12em;
       *:first-child~*{
         opacity: 0;
       }
@@ -44,7 +44,7 @@
 .catalog-detail__col2{
   &:not(._show-all){
     .text{
-      max-height: 15em;
+      height: 15em;
     }
   }
 }
@@ -195,7 +195,7 @@
   .catalog-info{
     &:not(._show-all){
       .text{
-        max-height: 9em;
+        height: 9em;
       }
     }
   }
@@ -284,7 +284,7 @@
     &:not(._show-all){
       .text{
         display: block;
-        max-height: 14.5em;
+        height: 14.5em;
         p:first-child{
           @include truncate(11);
         }
@@ -296,7 +296,7 @@
   .catalog-detail__col2{
     &:not(._show-all){
       .text{
-        max-height: 18em;
+        height: 18em;
       }
     }
   }

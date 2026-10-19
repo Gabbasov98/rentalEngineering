@@ -4,6 +4,9 @@
     grid-template-columns: repeat(3,calc(100% / 3 - 1.25em));
     gap: 3em 1.875em;
   }
+  .filter{
+    margin-bottom: 0;
+  }
 }
 
 .more-btn{
@@ -34,7 +37,9 @@
     }
   }
   .text{
-
+    h1,h2,h3,h4,h5,h6{
+      color: $primary;
+    }
   }
   .faq-item{
     margin-bottom: 1em;
@@ -113,10 +118,72 @@
 
 
 @media screen and (max-width: 992px){
+  .blog{
+    &__top{
+      display: block;
+    }
+    .filter{
+      margin-top: 1.125em;
+    }
+    &__grid{
+      grid-template-columns: repeat(2,calc(50% - .9375em));
+      gap: 1.875em;
+    }
+  }
 
+  .text-big{
+    p,li{
+      font-size: 1em;
+    }
+    hr{
+      margin-top: -1em;
+    }
+  }
+
+  .blog-slider{
+    .swiper-slide{
+      width: 50%;
+    }
+  }
 }
 
 
 @media screen and (max-width: 576px){
+  .blog{
+    &__grid{
+      grid-template-columns: 100%;
+    }
+  }
 
+  .article-slider{
+    &__bottom{
+      right: .5em;
+      bottom: .5em;
+      span{
+        font-size: .75em;
+      }
+    }
+    .swiper-button{
+      width: 1.5em;
+      height: 1.5em;
+      &-prev{
+        left: .5em;
+      }
+      &-next{
+        right: .5em;
+      }
+    }
+    .swiper-pagination-fraction{
+      font-size: .75em;
+      span{
+        font-size: 1em;
+      }
+    }
+  }
+
+  .blog-slider{
+    .swiper-slide{
+      width: 100%;
+    }
+  }
 }
