@@ -92,6 +92,20 @@
     }
 }
 
+.client-modal{
+    .modal__dialog{
+        padding: 1.5em;
+    }
+    &__img{
+        margin-bottom: 2.25em;
+        max-width: 10.125em;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
 
 
 @media screen and (max-width: 992px){

@@ -29,14 +29,15 @@
     *{
       transition: all .3s;
     }
+
+
   }
   &:not(._show-all){
     .text{
+      display: -webkit-box;
+      -webkit-line-clamp: 8; /* Показываем 3 строки */
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 12em;
-      *:first-child~*{
-        opacity: 0;
-      }
     }
   }
 }
@@ -44,7 +45,7 @@
 .catalog-detail__col2{
   &:not(._show-all){
     .text{
-      height: 15em;
+      -webkit-line-clamp: 10;
     }
   }
 }
@@ -195,7 +196,7 @@
   .catalog-info{
     &:not(._show-all){
       .text{
-        height: 9em;
+        -webkit-line-clamp: 7;
       }
     }
   }
@@ -283,12 +284,7 @@
   .catalog-info{
     &:not(._show-all){
       .text{
-        display: block;
-        height: 14.5em;
-        p:first-child{
-          @include truncate(11);
-        }
-
+        -webkit-line-clamp: 11;
       }
     }
   }
@@ -296,7 +292,7 @@
   .catalog-detail__col2{
     &:not(._show-all){
       .text{
-        height: 18em;
+        -webkit-line-clamp: 13;
       }
     }
   }

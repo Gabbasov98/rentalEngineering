@@ -55,6 +55,14 @@
   }
 }
 
+._toggle-more-parent{
+  &:not(._show-btn){
+    ._toggle-more{
+      display: none;
+    }
+  }
+}
+
 
 @media screen and (max-width: 992px){
   .float-btn{

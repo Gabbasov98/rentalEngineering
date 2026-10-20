@@ -11,11 +11,15 @@
   border: $border;
   border-radius: 0.5em;
   height: 8.75em;
-  padding: 2.8em 1.875em;
+  padding: 1.25em 1.875em;
   @include center;
+  cursor: pointer;
   img{
     max-width: 100%;
     max-height: 100%;
+  }
+  &__text{
+    display: none;
   }
 }
 

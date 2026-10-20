@@ -28,10 +28,38 @@ $("._toggle-more").click(function() {
     $(this).parents("._toggle-more-parent").toggleClass("_show-all")
 })
 
+document.querySelectorAll('._toggle-more-parent').forEach(parent => {
+    let el = parent.querySelector(".text")
+    // Проверяем, обрезается ли текст (scrollHeight больше видимой высоты)
+    const isOverflowing = el.scrollHeight > el.clientHeight;
+
+    if (isOverflowing) {
+        parent.classList.add("_show-btn")
+
+        // btn.addEventListener('click', () => {
+        //     const expanded = el.classList.toggle('is-expanded');
+        //     btn.textContent = expanded ? 'Свернуть' : 'Читать полностью';
+        //     btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        // });
+        //
+        // el.after(btn);
+    }
+});
+
 $(".catalog-link:first-child").addClass("_hover")
 $(".catalog-link").mouseover(function () {
     $(".catalog-link").removeClass("_hover")
     $(this).addClass("_hover")
+})
+
+$(".client-card").click(function () {
+    let img = $(this).find("img").attr("src")
+    let text = $(this).find(".client-card__text").html()
+    let link = $(this).attr("data-news-link")
+    $("#clientModal").find(".client-modal__img img").attr("src",img)
+    $("#clientModal").find(".client-modal__text").html(text)
+    $("#clientModal").find(".client-modal__link").attr("href",link)
+    openModal("clientModal")
 })
 
 // $(document).mouseup( function(e){
