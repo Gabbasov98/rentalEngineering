@@ -2,10 +2,14 @@
   @include grid100gap(1.375em);
   ul,ol{
     padding-left: .625em;
-    @include grid100gap(.75em);
+    //@include grid100gap(.75em);
     li{
       position: relative;
       padding-left: 1em;
+      margin-bottom: .75em;
+      &:last-child{
+        margin-bottom: 0;
+      }
       &:before{
         position: absolute;
         top: 0;
