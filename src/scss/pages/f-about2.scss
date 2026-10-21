@@ -92,6 +92,17 @@
       font-size: .75em;
     }
   }
+
+  .clients-page{
+    &__grid{
+      grid-template-columns: repeat(4,calc(25% - .5625em));
+      gap: .75em;
+    }
+    .client-card{
+      height: 5.3125em;
+      padding: 1em 2em;
+    }
+  }
 }
 
 
@@ -100,6 +111,12 @@
     grid-template-columns: 100%;
     &__content{
       font-size: 1em;
+    }
+  }
+
+  .clients-page {
+    &__grid {
+      grid-template-columns: repeat(2, calc(50% - .375em));
     }
   }
 }
