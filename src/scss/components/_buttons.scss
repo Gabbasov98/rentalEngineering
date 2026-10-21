@@ -15,20 +15,28 @@
     }
 }
 
+.m-btn-blue,
+.m-btn-white{
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    transition: background-position .5s;
+    &:hover{
+        background-position: 0 0;
+    }
+}
+
 .m-btn-blue{
-    background: linear-gradient(90deg, #4863EC 0%, #36408C 100%);
+    background-image: linear-gradient(90deg, #4863EC 0%, #36408C 100%);
     color: $white;
     &:hover{
-        opacity: .9;
         color: $white;
     }
 }
 
 .m-btn-white{
     color: $primary;
-    background: linear-gradient(90deg, #FFF 0%, #DDD 100%);
+    background-image: linear-gradient(90deg, #FFF 0%, #DDD 100%);
     &:hover{
-        opacity: .9;
         color: $primary;
     }
 }
