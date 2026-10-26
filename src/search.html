@@ -1,0 +1,81 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Поиск", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="search-page m-section">
+                <div class="container">
+                    <div class="conf__inner">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="">Главная</a></li>
+                                <li><span>Поиск</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="search-page__inner">
+                            <div class="menu-search">
+                                <img src="img/search.svg" alt="">
+                                <div class="fg">
+                                    <input type="text" placeholder="Поиск на сайте">
+                                </div>
+                            </div>
+                            <div class="search-page__text _mt24">
+                                <span class="text14-tablet">Найдено: 27</span>
+                                 <div class="text14 _mt8">
+                                    В запросе “<a href="" class="underline-text blue-text">sc 200</a>” восстановлена раскладка клавиатуры.
+                                </div>
+                            </div>
+                            <div class="search-page__items">
+                                @@include('components/cards/_search-item.html')
+                                @@include('components/cards/_search-item.html')
+                                @@include('components/cards/_search-item.html')
+                                @@include('components/cards/_search-item.html')
+                                @@include('components/cards/_search-item.html')
+                            </div>
+                            <div class="_mt48 _mt24-tablet _flex-between">
+                                <div class="pag">
+                                    <a href="" class="pag__prev">
+                                        <img src="img/arrow-left.svg" alt="">
+                                        <span>Начало</span>
+                                    </a>
+                                    <div class="pag__items">
+                                        <a href="" class="pag__item _active">
+                                            <span>1</span>
+                                        </a>
+                                        <a href="" class="pag__item">
+                                            <span>2</span>
+                                        </a>
+                                        <a href="" class="pag__item">
+                                            <span>3</span>
+                                        </a>
+                                    </div>
+                                    <a href="" class="pag__next">
+                                        <span>Конец</span>
+                                        <img src="img/arrow-right.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="search-page__sort text14">
+                                    Отсортировано:  <a href="" class="_active">по релевантности</a> <a href="">по дате</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

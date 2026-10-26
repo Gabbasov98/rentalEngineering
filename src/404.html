@@ -1,0 +1,48 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Страница не найдена", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="error404 m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>Страница не найдена</span></li>
+                        </ul>
+                    </div>
+                    <div class="error404__inner">
+                        <h1 class="h1">
+                            Страница не найдена
+                        </h1>
+                        <div class="error404__num">
+                            404
+                        </div>
+                        <div class="error404__desc">
+                            <div class="text20 text14-tablet">
+                                Запрашиваемая вами страница не существует, либо устарела
+                            </div>
+                        </div>
+                        <a href="" class="arrow-link">
+                            <img src="img/arrow-left.svg" alt="">
+                            <span>Вернуться на главную</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
