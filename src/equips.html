@@ -1,0 +1,101 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru",
+"title":"Каталог запчастей", "description":"", "keywords":"",})
+
+<body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <div class="equips m-section">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">Услуги</a></li>
+                            <li><span>Запчасти</span></li>
+                        </ul>
+                    </div>
+                    <h1 class="h1 blue-text">
+                        Каталог запчастей
+                    </h1>
+                    <div class="equips__groups">
+                        <div class="equips__group">
+                            <div class="text20 text18-tablet medium-text">
+                                Рабочие платформы
+                            </div>
+                            <div class="equips__grid">
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Комплектующие элементы каталог SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC6000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC5000 ENG",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Комплектующие элементы каталог SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC6000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC5000 ENG",
+                                })
+                            </div>
+                        </div>
+                        <div class="equips__group">
+                            <div class="text20 text18-tablet medium-text">
+                                Грузовые подъемники
+                            </div>
+                            <div class="equips__grid">
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SPC-SC8",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC20",
+                                })
+                            </div>
+                        </div>
+                        <div class="equips__group">
+                            <div class="text20 text18-tablet medium-text">
+                                Промышленные подъемники
+                            </div>
+                            <div class="equips__grid">
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Комплектующие элементы каталог SC8000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC6000",
+                                })
+                                @@include('components/cards/_equip-item.html',{
+                                "title":"Каталог запчастей SC5000 ENG",
+                                })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
