@@ -58,6 +58,15 @@
 
 .header-action{
   margin-left: auto;
+  &__search{
+    margin-right: 2.44em;
+    width: 1.125em;
+    @include center;
+    svg,
+    img{
+      width: 100%;
+    }
+  }
 }
 
 .burger{
@@ -202,6 +211,12 @@
     }
     &__icon{
       margin: 0;
+    }
+  }
+
+  .header-action{
+    &__search{
+      display: none;
     }
   }
 }

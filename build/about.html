@@ -51,6 +51,11 @@
                             </button>
 
                             <div class="header-action _flex">
+                                <button class="header-action__search" data-modal="searchModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M12.3493 12.4408L17 17M14.1541 7.44767C14.1541 11.0086 11.2095 13.8953 7.57706 13.8953C3.94465 13.8953 1 11.0086 1 7.44767C1 3.88672 3.94465 1 7.57706 1C11.2095 1 14.1541 3.88672 14.1541 7.44767Z" stroke-width="2" stroke="#36418F" />
+                                    </svg>
+                                </button>
                                 <button class="burger">
                                     <span class="burger__text text17">Меню</span>
                                     <span class="burger__icon">
@@ -731,6 +736,100 @@
                 <a href="" class="client-modal__link tex14 blue-text underline-text">
                     Перейти кновости
                 </a>
+            </div>
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="tenderModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="h4 blue-text">
+                Пригласить нас в тендер
+            </div>
+            <form action="" class="contacts-form">
+                <div class="fg">
+                    <label>Компания*</label>
+                    <input type="text">
+                </div>
+                <div class="fg">
+                    <label>Контактное лицо*</label>
+                    <input type="text">
+                </div>
+                <div class="fg">
+                    <label>Телефон:</label>
+                    <input type="tel">
+                </div>
+                <div class="fg">
+                    <label>E-mail*</label>
+                    <input type="email">
+                </div>
+                <div class="fg">
+                    <label>Объект*</label>
+                    <input type="email">
+                </div>
+                <div class="fg">
+                    <label>Необходимое оборудование*</label>
+                    <textarea></textarea>
+                </div>
+                <div class="file-input">
+                    <div class="text14 medium-text">
+                        Загрузить тендерную документацию
+                    </div>
+                    <div class="file-input__wrap">
+                        <div class="file-input__fake">
+                            <span class="text13">
+                            Выберите файл
+                        </span>
+                        </div>
+                        <div class="file-input__btn">
+                            <input type="file">
+                            <span class="text13">
+                            Прикрепить документ
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-form__checks">
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>
+                            Я принимаю условия об обработке моих <a href="">персональных данных</a>
+                        </span>
+                        </label>
+                    </div>
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>
+                            Я согласен получать информационные <br>
+                            и рекламные сообщения на указанный
+                            email/телефон.
+                        </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="contacts-form__btn m-btn m-btn-blue">
+                    <span>Отправить заявку</span>
+                </button>
+            </form>
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal search-modal" id="searchModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="menu-search">
+                <img src="img/search.svg" alt="">
+                <div class="fg">
+                    <input type="text" placeholder="Поиск на сайте">
+                </div>
             </div>
             <button class="close-btn _close-modal">
                 <img src="img/close.svg" alt="">

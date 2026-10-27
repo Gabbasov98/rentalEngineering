@@ -54,8 +54,8 @@
     }
     .close-btn{
         position: absolute;
-        top: 1em;
-        right: 1em;
+        top: .625em;
+        right: .625em;
     }
     .contacts-form{
         margin-top: 1em;
@@ -63,22 +63,22 @@
         &__btn{
             margin-top: -.25em;
         }
-    }
-    .fg{
-        label{
-            display: block;
-            font-size: 1.0625em;
-            line-height: 120%;
-            margin-bottom: .5em;
-            color: $black2;
-        }
-        input{
-            height: 3em;
-            padding: 0 1em;
-        }
-        textarea{
-            height: 5.5em;
-            padding: .75em 1em;
+        .fg{
+            label{
+                display: block;
+                font-size: 1.0625em;
+                line-height: 120%;
+                margin-bottom: .5em;
+                color: $black2;
+            }
+            input{
+                height: 3em;
+                padding: 0 1em;
+            }
+            textarea{
+                height: 5.5em;
+                padding: .75em 1em;
+            }
         }
     }
 }
@@ -103,6 +103,58 @@
             display: block;
             width: 100%;
         }
+    }
+}
+
+.file-input{
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .875em;
+        margin-top: .5em;
+        font-weight: 300;
+    }
+    &__fake{
+        height: 3em;
+        padding: 0 1em;
+        border-radius: .625em;
+        display: flex;
+        align-items: center;
+        border: 1px solid #C9CBDB;
+        color: #666;
+    }
+    &__btn{
+        color: $primary;
+        overflow: hidden;
+        input{
+            left: unset;
+            right: 0;
+            height: 100%;
+            width: 200%;
+        }
+    }
+}
+
+.search-modal{
+    .modal__bg{
+        background: transparent;
+    }
+    .modal__dialog{
+        padding: .625em;
+        width: 45em;
+        background-color: #E4EAF1;
+        box-shadow: 0 4px 40px 0 rgba(#000,.25);
+    }
+    .close-btn{
+        top: unset;
+        bottom: 100%;
+        background-color: transparent;
+        right: .25em;
+        margin-bottom: .25em;
+    }
+    .menu-search{
+        margin: 0;
     }
 }
 
