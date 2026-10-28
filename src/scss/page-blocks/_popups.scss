@@ -137,10 +137,15 @@
 }
 
 .search-modal{
+    &:after{
+        display: none;
+    }
     .modal__bg{
         background: transparent;
     }
     .modal__dialog{
+        margin: 9em auto 0;
+        display: block;
         padding: .625em;
         width: 45em;
         background-color: #E4EAF1;

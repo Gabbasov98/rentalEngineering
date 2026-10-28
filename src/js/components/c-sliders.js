@@ -1,3 +1,82 @@
+function mainSlider() {
+    const DEFAULT_MS = 7000;
+    const root = document.querySelector('.main-slider');
+
+    // Задаёт длительность кольца и перезапускает анимацию активного буллета
+    function setRingDuration(ms) {
+        root.style.setProperty('--ring-duration', ms + 'ms');
+
+        const ring = root.querySelector('.swiper-pagination-bullet-active .ring-progress');
+        if (ring) {
+            ring.style.setProperty('animation', 'none', 'important');
+            void ring.offsetWidth; // reflow, чтобы анимация стартовала заново
+            ring.style.removeProperty('animation');
+        }
+    }
+
+    function handleSlide(s) {
+        const slides = Array.from(s.slides);
+
+        // Останавливаем все видео, кроме текущего
+        slides.forEach(sl => sl.querySelectorAll('video').forEach(v => v.pause()));
+
+        const video = slides[s.activeIndex]?.querySelector('video');
+
+        // Обычный слайд: 7 секунд, работает автоплей Swiper
+        if (!video) {
+            setRingDuration(DEFAULT_MS * 1.4);
+            s.autoplay.start();
+            return;
+        }
+
+        // Видео-слайд: таймер выключаем, листаем по окончании ролика
+        s.autoplay.stop();
+        video.currentTime = 0;
+        video.onended = () => s.slideNext();
+
+        const start = () => {
+            const ms = isFinite(video.duration) ? video.duration * 1000 : DEFAULT_MS;
+            setRingDuration(ms * 1.4);
+            video.play().catch(() => {});
+        };
+
+        if (video.readyState >= 1) start(); // метаданные уже есть
+        else video.addEventListener('loadedmetadata', start, { once: true });
+    }
+
+    const swiper = new Swiper('.main-slider .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: { delay: DEFAULT_MS, disableOnInteraction: false },
+        speed: 500,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        navigation: {
+            nextEl: '.main-slider .swiper-button-next',
+            prevEl: '.main-slider .swiper-button-prev',
+        },
+        pagination: {
+            el: '.main-slider .swiper-pagination',
+            clickable: true,
+            renderBullet: (_, className) => `
+                <span class="${className}">
+                  <svg class="progress-ring" viewBox="0 0 26 26">
+                    <circle class="ring-bg" cx="13" cy="13" r="10"></circle>
+                    <circle class="ring-progress" cx="13" cy="13" r="10"></circle>
+                  </svg>
+                </span>
+            `
+        },
+        on: {
+            init: handleSlide,
+            slideChange: handleSlide,
+        }
+    });
+}
+
+mainSlider()
+
 function Sliders() {
     let SlidersArray = []
 

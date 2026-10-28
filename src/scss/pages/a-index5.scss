@@ -71,11 +71,15 @@
     position: relative;
     z-index: 2;
   }
-  &__img{
-    @include imgCover(0);
+  &__slider{
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &__img{
+    @include imgCover(0);
     width: 100%;
     height: 100%;
     &:after{
@@ -116,6 +120,101 @@
   }
 }
 
+.main-slider{
+  overflow: hidden;
+  .swiper-slide,
+  .swiper-container{
+    height: 100%;
+  }
+  .swiper-slide:first-child + .swiper-slide:nth-last-child(0) .main__img {
+    display: none;
+  }
+  .swiper-slide-prev:not(._video) .main__img,
+  .swiper-slide-active:not(._video) .main__img,
+  .swiper-slide-duplicate-active:not(._video) .main__img {
+    animation-name: zoom2;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+  }
+  .swiper-pagination{
+    position: absolute;
+    margin: 0;
+    bottom: 2.25em;
+    left: 0;
+    width: 100%;
+  }
+  .swiper-pagination-bullet{
+    position: relative;
+    width: 0.75em;
+    height: 0.75em;
+    margin: 0 .625em !important;
+    opacity: 1;
+    background-color: $white;
+    transform: rotate(-90deg);
+    border: none;
+    svg{
+      transition: 0s;
+      opacity: 0;
+      @include centerAbsolute;
+      //transform: rotate(-45deg);
+    }
+    &-active{
+      margin: 0 .75em !important;
+      background-color: $primary2;
+      svg{
+        opacity: 1;
+      }
+      .ring-progress{
+        animation: fillRing var(--ring-duration, 7s) linear forwards !important;
+      }
+    }
+  }
+}
+
+@keyframes zoom2 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-pagination{
+  @include center;
+  .swiper-pagination-bullet{
+
+  }
+  &._rings{
+
+  }
+}
+
+@keyframes fillRing {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+.progress-ring {
+  width: 2.125em;
+  height: 2.125em;
+  transform:rotate(-90deg) translate(-50%,-50%);
+}
+
+.ring-bg { /* белое кольцо */
+  fill:none; stroke:#fff; stroke-width:3;
+}
+
+.ring-progress { /* красная дуга */
+  fill:none;
+  stroke: $primary2;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-dasharray:100;
+  stroke-dashoffset:100;
+}
+
 
 @media screen and (max-width: 992px){
   .main-advantages{
@@ -135,7 +234,9 @@
 
   .main{
     position: relative;
-    height: 36em;
+    height: auto;
+    min-height: 36em;
+    padding: 16em 0 3.75em;
     margin-bottom: .9375em;
     &__img{
       &:after{
@@ -159,6 +260,13 @@
       span{
         font-size: 1em;
       }
+    }
+  }
+
+  .main-slider{
+    .swiper-pagination{
+      bottom: 1.5em;
+      font-size: .8em;
     }
   }
 }

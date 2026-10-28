@@ -35,6 +35,7 @@
 }
 
 .service-item{
+  display: block;
   &__img{
     @include imgCover(73.7%);
     border-radius: .625em;

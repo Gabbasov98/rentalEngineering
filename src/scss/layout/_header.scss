@@ -135,6 +135,9 @@
         display: block;
       }
     }
+    .header-action__search path{
+      stroke: $white;
+    }
     .footer-contacts path{
       fill: $white;
     }
