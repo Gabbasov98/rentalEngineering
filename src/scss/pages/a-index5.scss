@@ -110,6 +110,9 @@
   }
   &__nav{
     margin-top: 4.125em;
+    &._mob{
+      display: none;
+    }
   }
   &__link{
     padding: 0 3.375em;
@@ -238,6 +241,10 @@
     min-height: 36em;
     padding: 16em 0 3.75em;
     margin-bottom: .9375em;
+    .container{
+      pointer-events: none;
+      margin-bottom: 5em;
+    }
     &__img{
       &:after{
         width: 100%;
@@ -253,6 +260,16 @@
     }
     &__nav{
       margin-top: 1.875em;
+      &._desktop{
+        display: none;
+      }
+      &._mob{
+        display: flex;
+        position: absolute;
+        bottom: 3.75em;
+        left: 1em;
+        z-index: 3;
+      }
     }
     &__link{
       padding: 0 2.25em;
