@@ -1,6 +1,7 @@
 function mainSlider() {
     const DEFAULT_MS = 7000;
     const root = document.querySelector('.main-slider');
+    if (!root) return;
 
     // Задаёт длительность кольца и перезапускает анимацию активного буллета
     function setRingDuration(ms) {
@@ -9,47 +10,80 @@ function mainSlider() {
         const ring = root.querySelector('.swiper-pagination-bullet-active .ring-progress');
         if (ring) {
             ring.style.setProperty('animation', 'none', 'important');
-            void ring.offsetWidth; // reflow, чтобы анимация стартовала заново
+            void ring.offsetWidth;
             ring.style.removeProperty('animation');
         }
     }
 
+    // Постер проявляется плавно, как только загрузился
+    root.querySelectorAll('.main__poster').forEach(img => {
+        const show = () => img.classList.add('_ready');
+        if (img.complete && img.naturalWidth) show();
+        else img.addEventListener('load', show, { once: true });
+    });
+
+    // Видео проявляется, только когда реально пошли кадры
+    root.querySelectorAll('video').forEach(video => {
+        const show = () => video.classList.add('_ready');
+        video.addEventListener('playing', show);
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime > 0) show();
+        });
+    });
+
+    // Обычный слайд — работает таймер Swiper
+    function runAsImage(s) {
+        setRingDuration(DEFAULT_MS * 1.4);
+        s.autoplay.start();
+    }
+
     function handleSlide(s) {
         const slides = Array.from(s.slides);
-
-        // Останавливаем все видео, кроме текущего
-        slides.forEach(sl => sl.querySelectorAll('video').forEach(v => v.pause()));
-
         const video = slides[s.activeIndex]?.querySelector('video');
 
-        // Обычный слайд: 7 секунд, работает автоплей Swiper
+        // Остальные видео на паузу
+        slides.forEach(sl => sl.querySelectorAll('video').forEach(v => {
+            if (v !== video) v.pause();
+        }));
+
         if (!video) {
-            setRingDuration(DEFAULT_MS * 1.4);
-            s.autoplay.start();
+            runAsImage(s);
             return;
         }
 
         // Видео-слайд: таймер выключаем, листаем по окончании ролика
         s.autoplay.stop();
-        video.currentTime = 0;
         video.onended = () => s.slideNext();
 
         const start = () => {
             const ms = isFinite(video.duration) ? video.duration * 1000 : DEFAULT_MS;
             setRingDuration(ms * 1.4);
-            video.play().catch(() => {});
+            const p = video.play();
+            // Автозапуск запрещён (энергосбережение и т.п.) — остаётся постер, листаем по таймеру
+            if (p && p.catch) p.catch(() => runAsImage(s));
         };
 
-        if (video.readyState >= 1) start(); // метаданные уже есть
+        if (video.readyState >= 1) start();
         else video.addEventListener('loadedmetadata', start, { once: true });
     }
 
-    const swiper = new Swiper('.main-slider .swiper-container', {
+    // Когда слайд уже скрыт — перематываем видео в начало
+    function resetHidden(s) {
+        Array.from(s.slides).forEach((sl, i) => {
+            if (i === s.activeIndex) return;
+            sl.querySelectorAll('video').forEach(v => {
+                v.pause();
+                if (v.currentTime > 0) v.currentTime = 0;
+            });
+        });
+    }
+
+    new Swiper('.main-slider .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
-        loop: true,
+        rewind: true,          // вместо loop: true — не клонирует слайд с видео
         autoplay: { delay: DEFAULT_MS, disableOnInteraction: false },
-        speed: 500,
+        speed: 800,
         effect: 'fade',
         fadeEffect: { crossFade: true },
         navigation: {
@@ -71,6 +105,7 @@ function mainSlider() {
         on: {
             init: handleSlide,
             slideChange: handleSlide,
+            slideChangeTransitionEnd: resetHidden,
         }
     });
 }
