@@ -15,24 +15,28 @@ function mainSlider() {
         }
     }
 
-    // Постер проявляется плавно, как только загрузился
-    root.querySelectorAll('.main__poster').forEach(img => {
-        const show = () => img.classList.add('_ready');
-        if (img.complete && img.naturalWidth) show();
-        else img.addEventListener('load', show, { once: true });
-    });
+    // Видео готово — убираем загрузку и плавно проявляем ролик
+    function showVideo(video) {
+        video.closest('.main__img')?.classList.add('_ready');
+    }
 
-    // Видео проявляется, только когда реально пошли кадры
-    root.querySelectorAll('video').forEach(video => {
-        const show = () => video.classList.add('_ready');
-        video.addEventListener('playing', show);
-        video.addEventListener('timeupdate', () => {
-            if (video.currentTime > 0) show();
-        });
-    });
+    // Ловим момент, когда реально пошли кадры
+    // (capture — сработает, даже если видео стартовало раньше скрипта)
+    root.addEventListener('playing', e => {
+        if (e.target.tagName === 'VIDEO') showVideo(e.target);
+    }, true);
+    root.addEventListener('timeupdate', e => {
+        if (e.target.tagName === 'VIDEO' && e.target.currentTime > 0) showVideo(e.target);
+    }, true);
+
+    // Заморозить / отпустить кольцо пагинации
+    function ringWait(on) {
+        root.classList.toggle('_ring-wait', on);
+    }
 
     // Обычный слайд — работает таймер Swiper
     function runAsImage(s) {
+        ringWait(false);
         setRingDuration(DEFAULT_MS * 1.4);
         s.autoplay.start();
     }
@@ -55,12 +59,32 @@ function mainSlider() {
         s.autoplay.stop();
         video.onended = () => s.slideNext();
 
+        // Кольцо стоит на нуле, пока видео реально не пошло
+        ringWait(true);
+        let ringStarted = false;
+        video.onplaying = () => {
+            if (!ringStarted) {
+                ringStarted = true;
+                const left = isFinite(video.duration) ? (video.duration - video.currentTime) * 1000 : DEFAULT_MS;
+                setRingDuration(left * 1.4);
+            }
+            ringWait(false);
+        };
+        // Видео подвисло на подгрузке — кольцо тоже ждёт
+        video.onwaiting = () => ringWait(true);
+
+        // Видео уже играет (стартовало раньше скрипта)
+        if (!video.paused && video.readyState >= 3) video.onplaying();
+
         const start = () => {
-            const ms = isFinite(video.duration) ? video.duration * 1000 : DEFAULT_MS;
-            setRingDuration(ms * 1.4);
             const p = video.play();
-            // Автозапуск запрещён (энергосбережение и т.п.) — остаётся постер, листаем по таймеру
-            if (p && p.catch) p.catch(() => runAsImage(s));
+            // Автозапуск запрещён (энергосбережение на iPhone и т.п.):
+            // показываем первый кадр и листаем по обычному таймеру
+            if (p && p.catch) p.catch(() => {
+                if (video.readyState >= 2) showVideo(video);
+                else video.addEventListener('loadeddata', () => showVideo(video), { once: true });
+                runAsImage(s);
+            });
         };
 
         if (video.readyState >= 1) start();
@@ -81,7 +105,7 @@ function mainSlider() {
     new Swiper('.main-slider .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
-        rewind: true,          // вместо loop: true — не клонирует слайд с видео
+        rewind: true, // вместо loop: true — не клонирует слайд с видео
         autoplay: { delay: DEFAULT_MS, disableOnInteraction: false },
         speed: 800,
         effect: 'fade',
