@@ -14,7 +14,15 @@
                             <div class="swiper-slide _video">
                                 <div class="main__img m-backdrop">
                                     <div class="main__loader"></div>
-                                    <video autoplay muted playsinline preload="auto" src="videos/video.mp4"></video>
+                                    <!-- Если не загружена мобилка-->
+                                    <video autoplay muted playsinline preload="auto">
+                                        <source src="videos/video.mp4">
+                                    </video>
+                                    <!-- Иначе бери нижний-->
+<!--                                    <video autoplay muted playsinline preload="auto">-->
+<!--                                        <source src="videos/video.mp4" media="(min-width: 577px)">-->
+<!--                                        <source src="videos/video.mp4">-->
+<!--                                    </video>-->
                                 </div>
                             </div>
                             <div class="swiper-slide">
