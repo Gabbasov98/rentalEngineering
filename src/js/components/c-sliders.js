@@ -55,9 +55,13 @@ function mainSlider() {
             return;
         }
 
-        // Видео-слайд: таймер выключаем, листаем по окончании ролика
+        // Видео-слайд: таймер выключаем
         s.autoplay.stop();
-        video.onended = () => s.slideNext();
+
+        // Слайд один — видео крутится бесконечно, иначе по окончании листаем дальше
+        const single = s.slides.length === 1;
+        video.loop = single;
+        video.onended = single ? null : () => s.slideNext();
 
         // Кольцо стоит на нуле, пока видео реально не пошло
         ringWait(true);
