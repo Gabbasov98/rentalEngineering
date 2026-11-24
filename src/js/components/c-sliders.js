@@ -189,6 +189,7 @@ function Sliders() {
             observeParents: true,
             observeSlideChildren: true,
             autoplay,
+            speed: isProducts ? 900 : 300,
             navigation: {
                 nextEl: `.slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.slider[data-slider-id="${index}"] .swiper-button-prev`,
