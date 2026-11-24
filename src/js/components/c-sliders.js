@@ -149,6 +149,7 @@ function Sliders() {
 
         const isProducts = slider.classList.contains("products-slider")
         let autoplay = false
+        let speed = 300
 
         let pagination = {
             el: `.slider[data-slider-id="${index}"] .swiper-pagination`,
@@ -163,11 +164,16 @@ function Sliders() {
             }
         }
 
+        if(slider.classList.contains("advantages-slider")){
+            speed = 800
+        }
+
         if (isProducts) {
             autoplay = {
                 delay: 2000,
                 disableOnInteraction: true
             }
+            speed = 900
         }
 
         function renderFraction(current,all) {
@@ -189,7 +195,7 @@ function Sliders() {
             observeParents: true,
             observeSlideChildren: true,
             autoplay,
-            speed: isProducts ? 900 : 300,
+            speed,
             navigation: {
                 nextEl: `.slider[data-slider-id="${index}"] .swiper-button-next`,
                 prevEl: `.slider[data-slider-id="${index}"] .swiper-button-prev`,
