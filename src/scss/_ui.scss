@@ -115,6 +115,41 @@
   }
 }
 
+.scroll-up {
+  z-index: 22;
+  position: fixed;
+  right: 2.5em;
+  bottom: 2.5em;
+  width: 2.5em;
+  height: 2.5em;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  &:hover {
+    circle{
+      fill: $primary;
+    }
+    path {
+      stroke: $white;
+    }
+  }
+  svg{
+    width: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    right: 1em;
+    bottom: 1em;
+  }
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 
 @media screen and (max-width: 992px){
 

@@ -322,3 +322,10 @@ function gallery() {
 
 Sliders()
 gallery()
+
+let clipsSlidesCount = $(".clips .swiper-slide").length
+console.log(clipsSlidesCount)
+
+if(clipsSlidesCount <= 2 && window.innerWidth > 992){
+    $(".clips").addClass("_hide-nav")
+}
